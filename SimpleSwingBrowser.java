@@ -188,7 +188,7 @@ public class SimpleSwingBrowser extends JFrame {
             public void run() {
                 SimpleSwingBrowser browser = new SimpleSwingBrowser();
                 browser.setVisible(true);
-                browser.loadURL("http://google.com");
+                browser.loadURL("http://aek365.com");
            }
        });
     }
