@@ -17,6 +17,6 @@ public class WebBrowserJavantistes {
       public void run() {
         createAndShowGUI();
       }
-    {)
+    });
   }
 }
