@@ -13,7 +13,7 @@ public class JAVA{
 
 					FileInputStream fstream= new FileInputStream("m.txt");//specify document name
 					DataInputStream in= new DataInputStream(fstream);
-					BufferedReader br=new BufferedReader(new InputStreamReader(in));
+					BufferedReader br=new BufferedReader(new InputStreamReader(in), StandardCharsets.UTF_8);
 					String line;
 					while((line=br.readLine())!= null){
 							System.out.println(br.readLine());
