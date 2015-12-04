@@ -16,7 +16,9 @@ public class JAVA{
 					BufferedReader br=new BufferedReader(new InputStreamReader(in), StandardCharsets.UTF_8);
 					String line;
 					while((line=br.readLine())!= null){
-							System.out.println(br.readLine());
+						if (line.contains("<h1")){
+							System.out.println(line);
+						}
 
 					}
 					in.close();
