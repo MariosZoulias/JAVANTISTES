@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 
-public class JAVAAA{
+public class JAVA{
 	public static void main (String[] args) {
 		try{
 
