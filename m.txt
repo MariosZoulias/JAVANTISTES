@@ -75,7 +75,9 @@
 				   <h2 style="text-align:left; color:blue;"> Ενδιαφέροντα  </h2>
 				   <p>Υδατοσφαιριση,κηνυγι,μυικη εκγυμναση,ελληνικη μουσικη,ποδοσφαιρο</p>
 				  <a href="#top" style="text-align:center; background-color:orange;"> <ul>Μετάβαση στην αρχή της σελίδας</ul></a>
-				
+</body>
+</head>
+</html>
 
 
 
