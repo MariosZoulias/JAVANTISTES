@@ -13,13 +13,42 @@ public class JAVA{
 
 					FileInputStream fstream= new FileInputStream("m.txt");//specify document name
 					DataInputStream in= new DataInputStream(fstream);
-					BufferedReader br=new BufferedReader(new InputStreamReader(in), StandardCharsets.UTF_8);
+					BufferedReader br=new BufferedReader(new InputStreamReader(in));
+
 					String line;
 					while((line=br.readLine())!= null){
-						if (line.contains("<h1")){
-							System.out.println(line);
-						}
+						if (line.startsWith("<h1")){
+								char[] passInCharArray = line.toCharArray();
+								char key = '>';
+								int returnvalue = -1;
+								for (int i = 0; i < passInCharArray.length; i++) {
+									if (key == passInCharArray[i]) {
+										returnvalue = i;
+										break;
+									}
+						    	}
+								char lastKey = '<';
+								int value = -1;
+								int index = -1;
+								for (int i = 0; i < passInCharArray.length; i++) {
+									if (lastKey == passInCharArray[i]) {
+								    	value = i;
+								    	if (value > 1) {
+											index = i;
+										}
+								    }
+						    	}
+						    	char htmlCommand[];
+						    	int fields = ((index - returnvalue) - 1);
+						    	htmlCommand = new char[fields];
+						    	int sum = returnvalue + 1;
+								for (int j = 0; j < fields; j++) {
+									htmlCommand[j] = passInCharArray[sum + j];
+								}
 
+								String command = String.valueOf(htmlCommand);
+								System.out.println(command.toUpperCase());
+						}
 					}
 					in.close();
 					System.out.println("Reading in done!!");
@@ -32,3 +61,5 @@ public class JAVA{
 
 	}
 }
+
+
