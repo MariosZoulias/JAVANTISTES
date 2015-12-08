@@ -34,7 +34,7 @@ public class HtmlTxt {
                                     y_c.getInputStream(),encoding));
 
 		try{
-			File file = new File("C:/Users/stamatis/Desktop/html.txt");
+			File file = new File("C:/Users/User/Desktop/html.txt");//TO PATH DIAFEREI APO PC SE PC!!!
 
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);
