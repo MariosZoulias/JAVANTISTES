@@ -22,7 +22,7 @@ public class JAVA{
 
 					String line;
 					while((line=br.readLine())!= null){
-						if (line.startsWith("<h1")){
+						if (line.contains("<h1")){
 								char[] passInCharArray = line.toCharArray();
 								char key = '>';
 								int returnvalue = -1;
@@ -56,7 +56,7 @@ public class JAVA{
 						}
 					}
 					in.close();
-					System.out.println("Reading in done!!!");
+					System.out.println("Reading is done!!!");
 
 				}
 				catch(Exception ex){
