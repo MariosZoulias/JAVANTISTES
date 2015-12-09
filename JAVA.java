@@ -23,9 +23,11 @@ public class JAVA{
 					String line;
 					while((line=br.readLine())!= null){
 						if (line.contains("<h1")){
+							/*Αποθηκεύει σε έναν πίνακα όλους τους χαρακτήρες που διαβάζει στη γραμμή*/
 								char[] passInCharArray = line.toCharArray();
 								char key = '>';
 								int returnvalue = -1;
+							/*Βρίσκει που κλείνει η εντολή html αρχικά, για να ακολουθήσει το περιεχόμενό της, και επιστρέφει τη θέση του στον πίνακα */
 								for (int i = 0; i < passInCharArray.length; i++) {
 									if (key == passInCharArray[i]) {
 										returnvalue = i;
@@ -35,6 +37,7 @@ public class JAVA{
 								char lastKey = '<';
 								int value = -1;
 								int index = -1;
+							/*Εκτελεί ακριβώς την ίδια διαδικασία για τον χαρακτήρα : < */
 								for (int i = 0; i < passInCharArray.length; i++) {
 									if (lastKey == passInCharArray[i]) {
 								    	value = i;
@@ -43,6 +46,7 @@ public class JAVA{
 										}
 								    }
 						    	}
+						    	/*Περνάει σε έναν πίνακα χαρακτήρων τα στοιχεία που βρίσκονται μεταξύ των > < */
 						    	char htmlCommand[];
 						    	int fields = ((index - returnvalue) - 1);
 						    	htmlCommand = new char[fields];
@@ -50,7 +54,7 @@ public class JAVA{
 								for (int j = 0; j < fields; j++) {
 									htmlCommand[j] = passInCharArray[sum + j];
 								}
-
+							/*Μετατρέπει τον πίνακα χαρακτήρων σε συμβολοσειρά την οποία και εμφανίζει */
 								String command = String.valueOf(htmlCommand);
 								System.out.println(command.toUpperCase());
 						}
