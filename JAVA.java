@@ -5,15 +5,20 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.net.*;
+import java.io.*;
+import java.util.*;
+import java.io.File;
 
 
 public class JAVA{
 	public static void main (String[] args) {
+		String encoding = "UTF-8";
 		try{
 
 					FileInputStream fstream= new FileInputStream("m.txt");//specify document name
 					DataInputStream in= new DataInputStream(fstream);
-					BufferedReader br=new BufferedReader(new InputStreamReader(in));
+					BufferedReader br=new BufferedReader(new InputStreamReader(in , encoding));
 
 					String line;
 					while((line=br.readLine())!= null){
