@@ -15,7 +15,7 @@ import java.io.BufferedWriter;
 
 
 
-public class HtmlTxt {
+public class URLCon {
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in);
