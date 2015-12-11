@@ -15,10 +15,15 @@ import java.io.BufferedWriter;
 
 
 
-public class HtmlTxt {
+public class URLCon {
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in);
+<<<<<<< HEAD
+=======
+		
+		String encoding = "UTF-8"; // Or "ISO-8859-7".h entolh tha xrhsimopoihthei gia thn emfanish twn ellinikwn
+>>>>>>> origin/master
 
 		String encoding = "UTF-8"; // Or "ISO-8859-7".H entolh tha xrhssimopoihthei gia thn emfanish twn ellinikwn
 
@@ -30,7 +35,11 @@ public class HtmlTxt {
 		URL a = new URL("http://"+string_url);
 		URLConnection y_c = a.openConnection();
 		BufferedReader in = new BufferedReader(new InputStreamReader(
+<<<<<<< HEAD
                                     y_c.getInputStream(),encoding)); //To encoding einai gia ta ellinika
+=======
+                                    y_c.getInputStream(),encoding)); //to encoding einai gia ta ellinika
+>>>>>>> origin/master
 
 		try{
 			File file = new File("C:/Users/User/Desktop/html.txt");//TO PATH DIAFEREI APO PC SE PC!!!
