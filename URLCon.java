@@ -13,7 +13,6 @@ public class URLCon {
 	String encoding = "UTF-8"; // Or "ISO-8859-7".h entolh tha xrhsimopoihthei gia thn emfanish twn ellinikwn
 
 	String str = string_url;
-    System.out.println("enter the website: ");
 
 
 	URL a = new URL("http://"+string_url);
