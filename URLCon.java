@@ -19,45 +19,34 @@ public class URLCon {
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in);
-<<<<<<< HEAD
-=======
 		
-		String encoding = "UTF-8"; // Or "ISO-8859-7".h entolh tha xrhsimopoihthei gia thn emfanish twn ellinikwn
->>>>>>> origin/master
+	String encoding = "UTF-8"; // Or "ISO-8859-7".h entolh tha xrhsimopoihthei gia thn emfanish twn ellinikwn
 
-		String encoding = "UTF-8"; // Or "ISO-8859-7".H entolh tha xrhssimopoihthei gia thn emfanish twn ellinikwn
-
-
-		String string_url;
+	String string_url;
         System.out.println("enter the website: ");
         string_url = input.next();
 
-		URL a = new URL("http://"+string_url);
-		URLConnection y_c = a.openConnection();
-		BufferedReader in = new BufferedReader(new InputStreamReader(
-<<<<<<< HEAD
-                                    y_c.getInputStream(),encoding)); //To encoding einai gia ta ellinika
-=======
-                                    y_c.getInputStream(),encoding)); //to encoding einai gia ta ellinika
->>>>>>> origin/master
+	URL a = new URL("http://"+string_url);
+	URLConnection y_c = a.openConnection();
+	BufferedReader in = new BufferedReader(new InputStreamReader( y_c.getInputStream(),encoding)); //To encoding einai gia ta ellinika
 
-		try{
-			File file = new File("C:/Users/User/Desktop/html.txt");//TO PATH DIAFEREI APO PC SE PC!!!
+       	try{
+		File file = new File("C:/Users/User/Desktop/html.txt");//TO PATH DIAFEREI APO PC SE PC!!!
 
-			FileWriter fw = new FileWriter(file.getAbsoluteFile());
-			BufferedWriter bw = new BufferedWriter(fw);
-			StringBuffer sb = new StringBuffer();
-			String line = null;
+		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		BufferedWriter bw = new BufferedWriter(fw);
+		StringBuffer sb = new StringBuffer();
+		String line = null;
 
-			String inputLine;
-			while ((inputLine = in.readLine()) != null){
+		String inputLine;
+		while ((inputLine = in.readLine()) != null){
 
-				bw.write(inputLine);
-            	bw.newLine();
-            	sb.append(line);
+			bw.write(inputLine);
+            		bw.newLine();
+            		sb.append(line);
 
-			}
-			bw.close();
+		}
+		bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
