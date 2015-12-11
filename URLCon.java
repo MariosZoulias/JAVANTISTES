@@ -16,22 +16,23 @@ import java.io.BufferedWriter;
 
 
 public class URLCon {
-    public static void main(String[] args) throws Exception {
+	public URLCon() {};
+    public void createTxt(String string_url) throws Exception {
 
-        Scanner input = new Scanner(System.in);
-		
+    Scanner input = new Scanner(System.in);
+
 	String encoding = "UTF-8"; // Or "ISO-8859-7".h entolh tha xrhsimopoihthei gia thn emfanish twn ellinikwn
 
-	String string_url;
-        System.out.println("enter the website: ");
-        string_url = input.next();
+	String str = string_url;
+    System.out.println("enter the website: ");
+
 
 	URL a = new URL("http://"+string_url);
 	URLConnection y_c = a.openConnection();
 	BufferedReader in = new BufferedReader(new InputStreamReader( y_c.getInputStream(),encoding)); //To encoding einai gia ta ellinika
 
        	try{
-		File file = new File("C:/Users/User/Desktop/html.txt");//TO PATH DIAFEREI APO PC SE PC!!!
+		File file = new File("C:/Users/KOSTAS/Desktop/html.txt");//TO PATH DIAFEREI APO PC SE PC!!!
 
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
