@@ -47,11 +47,10 @@ public class URLCon {
 
 		}
 		bw.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
 		in.close();
 
-
-	}
+    }
 }
