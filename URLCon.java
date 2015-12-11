@@ -20,7 +20,7 @@ public class HtmlTxt {
 
         Scanner input = new Scanner(System.in);
 		
-		String encoding = "UTF-8"; // Or "ISO-8859-7".Η εντολή θα χρησιμοποιηθεί για την εμφάνιση των Ελληνικών
+		String encoding = "UTF-8"; // Or "ISO-8859-7".h entolh tha xrhsimopoihthei gia thn emfanish twn ellinikwn
 
 
 
@@ -31,7 +31,7 @@ public class HtmlTxt {
 		URL a = new URL("http://"+string_url);
 		URLConnection y_c = a.openConnection();
 		BufferedReader in = new BufferedReader(new InputStreamReader(
-                                    y_c.getInputStream(),encoding)); //Το encoding είναι για τα Ελληνικά
+                                    y_c.getInputStream(),encoding)); //to encoding einai gia ta ellinika
 
 		try{
 			File file = new File("C:/Users/User/Desktop/html.txt");//TO PATH DIAFEREI APO PC SE PC!!!
