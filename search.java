@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class Search {
 	public static void main(String args[]) {
-		String pass = "<h1>βιογραφικοοoooooo</h1>";
+		String pass = "<h1>bio</h1>";
 		char[] passInCharArray = pass.toCharArray();
 		for (char temp : passInCharArray) {
 			System.out.println(temp);
