@@ -5,7 +5,7 @@
 	<meta http-equiv="content-type" content="text/html;charset=windows-1253">
 </head>
 <body> 
- <h1 style="text-align:center;">              Biografiko            </h1 >                                                                   
+ <h1 style="text-align:center;">              ΒΙΟΓΡΑΦΙΚΟ ΣΗΜΕΙΩΜΑ            </h1 >                                                                   
    <p style="text-align:center;">   <img src="Marios.jpg.JPG" alt="εγω" width="160" height="160"></p>
    <p style="text-align:center;"> <b> Ονοματεπώνυμο: </b> Μαριος Ζουλιας </p>
 <p style="text-align:center;"> <b> imerominia genisis:</b> 09/12/1996 </p>
