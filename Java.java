@@ -11,7 +11,7 @@ import java.util.*;
 import java.io.File;
 
 
-public class JAVA{
+public class Java{
 	public static void main (String[] args) {
 		String encoding = "UTF-8";
 		try{
@@ -23,11 +23,11 @@ public class JAVA{
 					String line;
 					while((line=br.readLine())!= null){
 						if (line.contains("<h1")){
-							/*Αποθηκεύει σε έναν πίνακα όλους τους χαρακτήρες που διαβάζει στη γραμμή*/
+							/*apo8ikeuei se ena pinaka olous tous xaraktires pou diavazei sth grammi*/
 								char[] passInCharArray = line.toCharArray();
 								char key = '>';
 								int returnvalue = -1;
-							/*Βρίσκει που κλείνει η εντολή html αρχικά, για να ακολουθήσει το περιεχόμενό της, και επιστρέφει τη θέση του στον πίνακα */
+							/*briskei pou kleinei h entolh html arxika gia na akolou8isei to periexomeno ths, kai epistrefei th 8esh tu sto pinaka */
 								for (int i = 0; i < passInCharArray.length; i++) {
 									if (key == passInCharArray[i]) {
 										returnvalue = i;
@@ -37,7 +37,7 @@ public class JAVA{
 								char lastKey = '<';
 								int value = -1;
 								int index = -1;
-							/*Εκτελεί ακριβώς την ίδια διαδικασία για τον χαρακτήρα : < */
+							/*ektelei thn idia akrivws diadikasia gia ton xaraktira : < */
 								for (int i = 0; i < passInCharArray.length; i++) {
 									if (lastKey == passInCharArray[i]) {
 								    	value = i;
@@ -46,7 +46,7 @@ public class JAVA{
 										}
 								    }
 						    	}
-						    	/*Περνάει σε έναν πίνακα χαρακτήρων τα στοιχεία που βρίσκονται μεταξύ των > < */
+						    	/*pernaei se enan pinaka xarakthrwn ta stoixeia pou vrisontai metaksu twn > < */
 						    	char htmlCommand[];
 						    	int fields = ((index - returnvalue) - 1);
 						    	htmlCommand = new char[fields];
@@ -54,7 +54,7 @@ public class JAVA{
 								for (int j = 0; j < fields; j++) {
 									htmlCommand[j] = passInCharArray[sum + j];
 								}
-							/*Μετατρέπει τον πίνακα χαρακτήρων σε συμβολοσειρά την οποία και εμφανίζει */
+							/*eatrepei ton pinaka xarakthrwn se sumboloseiragia thn opoia kai emfanizei*/
 								String command = String.valueOf(htmlCommand);
 								System.out.println(command.toUpperCase());
 						}
