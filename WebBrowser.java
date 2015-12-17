@@ -67,9 +67,10 @@ public class WebBrowser extends JFrame implements ActionListener {
 				printText("ERROR !");
 			}
 			String encoding = "UTF-8";
+			//ftiaxnei antikeimeno ths klasshs Tags_1
 			Tags_1 tag_1 = new Tags_1();
 							try{
-
+//kanei thn idia douleia me to arxeio java.java dhladh diabazei ton kwdika grammh grammh
 								FileInputStream fstream= new FileInputStream("m.txt");//specify document name
 								DataInputStream in= new DataInputStream(fstream);
 								BufferedReader br=new BufferedReader(new InputStreamReader(in , encoding));
@@ -77,6 +78,8 @@ public class WebBrowser extends JFrame implements ActionListener {
 								String line;
 								while((line=br.readLine())!= null){
 									if(line.contains("<p")){
+//an brei tag p (dld "<p" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1 
+//ayth h diadikasia ginetai pleon edw wste na emfanizetai oxi sto cmd alla sayto pou eftiakse o ladopoulos
 										printText(tag_1.p(line));
 									}
 								}
