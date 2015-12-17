@@ -3,6 +3,18 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.net.*;
+import java.io.*;
+import java.util.*;
+import java.io.File;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -54,8 +66,27 @@ public class WebBrowser extends JFrame implements ActionListener {
 			} catch (Exception ab) {
 				printText("ERROR !");
 			}
-		String text = "biography"; //paradeigma ektyposis, pernaw ena string sti methodo printText, ekei me thn entolh append panw sth textArea emfanizv to string
-		printText(text);//tis grammes 57-58 afou katalavete pws doulevoun profanws svhste tes
+			String encoding = "UTF-8";
+			Tags_1 tag_1 = new Tags_1();
+							try{
+
+								FileInputStream fstream= new FileInputStream("m.txt");//specify document name
+								DataInputStream in= new DataInputStream(fstream);
+								BufferedReader br=new BufferedReader(new InputStreamReader(in , encoding));
+
+								String line;
+								while((line=br.readLine())!= null){
+									if(line.contains("<p")){
+										printText(tag_1.p(line));
+									}
+								}
+								in.close();
+
+							}
+							catch(Exception ex){
+								System.out.println("An exception is caught!! ");
+								ex.printStackTrace();
+							}
 	}
 
 	public void printText(String text) {
