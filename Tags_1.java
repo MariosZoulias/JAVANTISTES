@@ -7,6 +7,7 @@ import java.io.File;
 
 
 public class Tags_1 {
+	//o finder briskei ta grammata mpla mpla '' <kati> mpla mpla </kat>''
 	public static String finder(String line){
 		String encoding = "UTF-8";
 							/*apo8ikeuei se ena pinaka olous tous xaraktires pou diavazei sth grammi*/
@@ -44,7 +45,7 @@ public class Tags_1 {
 								String command = String.valueOf(htmlCommand);
 								return command;
 						}
-
+// h me8odos p einai to 1o kai pio eykolo tag (xrisimopoiei thn finder gia na vrei to mpla mpla kai aksiopoieitai apo thn klassh WebBrowser)
 		public static String p(String line){
 			String x = finder(line);
 			return x;
