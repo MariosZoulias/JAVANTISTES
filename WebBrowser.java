@@ -3,12 +3,10 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
-import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -17,10 +15,8 @@ public class WebBrowser extends JFrame implements ActionListener {
 	private JPanel middlePanel;
 	private JTextField textField;
 	private JLabel label;
-	private JEditorPane editorPane;
-	private JEditorPane displayEditorPane;
 	private JTextArea textArea;
-	private JScrollBar scrollBar;
+	private final static String newline = "\n"; //μεταβλητη για τη καινουργια γραμμη
 
 	public static void main(String[] args) {
 		WebBrowser frame = new WebBrowser();
@@ -45,8 +41,8 @@ public class WebBrowser extends JFrame implements ActionListener {
 	    textArea.setEditable(false);
 	    getContentPane().add(textArea, BorderLayout.CENTER);
 
-	    scrollBar = new JScrollBar();
-	    getContentPane().add(scrollBar, BorderLayout.EAST);
+	    JScrollPane scrollPane = new JScrollPane(textArea); //αλλαγη για το scrollBar
+	    add(scrollPane, BorderLayout.CENTER);
 
 	}
 
@@ -54,12 +50,17 @@ public class WebBrowser extends JFrame implements ActionListener {
 		String stringUrl = textField.getText();
 		URLCon urlcon = new URLCon();
 		try {
-		urlcon.createTxt(stringUrl);
-		} catch (Exception ab) {
-			System.out.println("ERROR !");
-		}
+			urlcon.createTxt(stringUrl);
+			} catch (Exception ab) {
+				System.out.println("ERROR !");
+			}
+		String text = "biography"; //παραδειγμα εκτυπωσης, περναω ενα string στη μεθοδο printText, εκει με την εντολη append πανω στη textArea εμφανιζω τη λεξη
+		printText(text);
 	}
 
-
-
+	public void printText(String text) {
+		for (int i = 0; i < 50; i++) {
+			textArea.append(text + newline); // το newline ειναι αναγκαστικο για να αλλαζει γραμμη αλλιως καθε φορα θα σβηνει και θα γραφει στη 1η γραμμη
+		}
+	}
 }
