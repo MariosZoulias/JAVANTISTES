@@ -16,7 +16,7 @@ public class WebBrowser extends JFrame implements ActionListener {
 	private JTextField textField;
 	private JLabel label;
 	private JTextArea textArea;
-	private final static String newline = "\n"; //μεταβλητη για τη καινουργια γραμμη
+	private final static String newline = "\n"; //metavliti gia tin kainourgia grammi
 
 	public static void main(String[] args) {
 		WebBrowser frame = new WebBrowser();
@@ -41,7 +41,7 @@ public class WebBrowser extends JFrame implements ActionListener {
 	    textArea.setEditable(false);
 	    getContentPane().add(textArea, BorderLayout.CENTER);
 
-	    JScrollPane scrollPane = new JScrollPane(textArea); //αλλαγη για το scrollBar
+	    JScrollPane scrollPane = new JScrollPane(textArea); //allagi gia to scrollBar
 	    add(scrollPane, BorderLayout.CENTER);
 
 	}
@@ -54,13 +54,13 @@ public class WebBrowser extends JFrame implements ActionListener {
 			} catch (Exception ab) {
 				System.out.println("ERROR !");
 			}
-		String text = "biography"; //παραδειγμα εκτυπωσης, περναω ενα string στη μεθοδο printText, εκει με την εντολη append πανω στη textArea εμφανιζω τη λεξη
+		String text = "biography"; //paradeigma ektyposis, pernaw ena string sti methodo printText, ekei me thn entolh append panw sth textArea emfanizv to string
 		printText(text);
 	}
 
 	public void printText(String text) {
 		for (int i = 0; i < 50; i++) {
-			textArea.append(text + newline); // το newline ειναι αναγκαστικο για να αλλαζει γραμμη αλλιως καθε φορα θα σβηνει και θα γραφει στη 1η γραμμη
+			textArea.append(text + newline); // to newline einai anagkastiko gia na allazei grammh alliw kathe fora tha svinei kai tha grafei sth 1h grammh
 		}
 	}
 }
