@@ -52,15 +52,13 @@ public class WebBrowser extends JFrame implements ActionListener {
 		try {
 			urlcon.createTxt(stringUrl);
 			} catch (Exception ab) {
-				System.out.println("ERROR !");
+				printText("ERROR !");
 			}
 		String text = "biography"; //paradeigma ektyposis, pernaw ena string sti methodo printText, ekei me thn entolh append panw sth textArea emfanizv to string
-		printText(text);
+		printText(text);//tis grammes 57-58 afou katalavete pws doulevoun profanws svhste tes
 	}
 
 	public void printText(String text) {
-		for (int i = 0; i < 50; i++) {
 			textArea.append(text + newline); // to newline einai anagkastiko gia na allazei grammh alliw kathe fora tha svinei kai tha grafei sth 1h grammh
-		}
 	}
 }
