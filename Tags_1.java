@@ -51,4 +51,8 @@ public class Tags_1 {
 			return x;
 		}
 
+		public static String title(String line){
+			String x = finder(line);
+			return x;
+		}
 }
