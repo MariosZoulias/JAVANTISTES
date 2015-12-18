@@ -82,16 +82,16 @@ public class WebBrowser extends JFrame implements ActionListener {
 //ayth h diadikasia ginetai pleon edw wste na emfanizetai oxi sto cmd alla sayto pou eftiakse o ladopoulos
 										printText(tag_1.p(line));
 									}
-//an brei tag p (dld "<title" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1								
+//an brei tag title (dld "<title" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1								
 									if(line.contains("<title")){
 										printText(tag_1.title(line));
 									}
 									if(line.contains("<strong")){
-//an brei tag p (dld "<strong" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
+//an brei tag strong (dld "<strong" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
 										printText(tag_1.p(line));
 									}
 									if(line.contains("<a")){
-//an brei tag p (dld "<a" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
+//an brei tag a (dld "<a" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
 										printText(tag_1.p(line));
 									}
 								}
