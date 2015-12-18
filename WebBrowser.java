@@ -78,7 +78,7 @@ public class WebBrowser extends JFrame implements ActionListener {
 								String line;
 								while((line=br.readLine())!= null){
 									if(line.contains("<p")){
-//an brei tag p (dld "<p" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1 
+//an brei tag p (dld "<p" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
 //ayth h diadikasia ginetai pleon edw wste na emfanizetai oxi sto cmd alla sayto pou eftiakse o ladopoulos
 										printText(tag_1.p(line));
 									}
