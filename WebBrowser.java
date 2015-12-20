@@ -60,12 +60,6 @@ public class WebBrowser extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		String stringUrl = textField.getText();
-		URLCon urlcon = new URLCon();
-		try {
-			urlcon.createTxt(stringUrl);
-			} catch (Exception ab) {
-				printText("ERROR !");
-			}
 			String encoding = "UTF-8";
 			//ftiaxnei antikeimeno ths klasshs Tags_1
 			Tags_1 tag_1 = new Tags_1();
