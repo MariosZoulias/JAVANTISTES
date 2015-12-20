@@ -59,4 +59,14 @@ public class Tags_1 {
 			String x = finder(line);
 			return x;
     	        }
+    	        public static String hr(String line){
+			//ypologizw to platos tou xaraktira kai to platos tis othonis
+			int fontWidth = 1;
+			int screenWidth = 200;
+			String result = "";
+			for (int i=0; i<screenWidth; i++) {
+				result = result+"-";
+			}
+			return result;
+    		}
 }
