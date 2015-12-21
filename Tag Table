@@ -144,10 +144,7 @@ public class TagTable {
 					column = pinakas[i].length;
 				}
 			}
-			System.out.println(pinakas[0][0]);
-			System.out.println(pinakas[0][1]);
-			System.out.println(pinakas[1][0]);
-			System.out.println(pinakas[1][1]);
+		
 
 			JFrame frame = new JFrame();
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
