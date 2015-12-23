@@ -71,7 +71,7 @@ public class WebBrowser extends JFrame implements ActionListener {
 			Tags_1 tag_1 = new Tags_1();
 							try{
 //kanei thn idia douleia me to arxeio java.java dhladh diabazei ton kwdika grammh grammh
-								FileInputStream fstream= new FileInputStream("m.txt");//specify document name
+								FileInputStream fstream= new FileInputStream("html.txt");//specify document name
 								DataInputStream in= new DataInputStream(fstream);
 								BufferedReader br=new BufferedReader(new InputStreamReader(in , encoding));
 
@@ -82,7 +82,7 @@ public class WebBrowser extends JFrame implements ActionListener {
 //ayth h diadikasia ginetai pleon edw wste na emfanizetai oxi sto cmd alla sayto pou eftiakse o ladopoulos
 										printText(tag_1.p(line));
 									}
-//an brei tag title (dld "<title" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1								
+//an brei tag title (dld "<title" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
 									if(line.contains("<title")){
 										printText(tag_1.title(line));
 									}
@@ -99,7 +99,7 @@ public class WebBrowser extends JFrame implements ActionListener {
 //an brei tag li (dId "<li") tote kalei kai aksiopoiei th me8odo li ths Tags_1
 										printText("   *" + tag_1.li(line));
 								        }
-								        
+
 									if (line.contains("<br>")) {
 										line=line.replace("<br>", "/n");
 									}

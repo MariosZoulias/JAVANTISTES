@@ -1,11 +1,3 @@
-import java.util.Scanner;
-import java.net.*;
-import java.io.*;
-import java.util.*;
-import java.io.File;
-
-
-
 public class Tags_1 {
 	//o finder briskei ta grammata mpla mpla '' <kati> mpla mpla </kat>''
 	public static String finder(String line){

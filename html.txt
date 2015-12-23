@@ -1,0 +1,1237 @@
+
+<!doctype html>
+
+<html lang="el">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>
+		Οικονομικό Πανεπιστήμιο Αθηνών | Athens University of Economics and Business
+	</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=greek,latin" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	<!--  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"> -->
+
+	<link rel="stylesheet" href="assets/css/page.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/jquery.sidr.dark.css">
+
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="alternate" type="application/rss+xml" title="Τα νέα του Πανεπιστημίου" href="pages/news/RSS/anakoinoseis_home.xml">
+	<link rel="alternate" type="application/rss+xml" title="Ανακοινώσεις Προπτυχιακών Τμημάτων ΟΠΑ" href="pages/news/RSS/anakoinoseis_akad.xml">
+	<link rel="alternate" type="application/rss+xml" title="Ανακοινώσεις Μεταπτυχιακών Προγραμμάτων ΟΠΑ" href="pages/news/RSS/anakoinoseis_post.xml">
+	<link rel="alternate" type="application/rss+xml" title="Ανακοινώσεις Διδακτορικών Προγραμμάτων ΟΠΑ" href="pages/news/RSS/anakoinoseis_phd.xml">
+	<link rel="alternate" type="application/rss+xml" title="Ανακοινώσεις Πρυτανείας ΟΠΑ" href="pages/news/RSS/anakoinoseis_pryt.xml">
+	<link rel="alternate" type="application/rss+xml" title="Προκηρύξεις Θέσεων Μελών ΔΕΠ ΟΠΑ" href="pages/news/RSS/prokirikseis_dep.xml">
+	<link rel="alternate" type="application/rss+xml" title="Συνέδρια, Ημερίδες, Ομιλίες ΟΠΑ" href="pages/news/RSS/ekdiloseis.xml">
+
+	<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+	<style>
+		/* Make it a marquee */
+		.marquee {
+			width: 100%;
+			margin: 0 auto;
+			overflow: hidden;
+			white-space: nowrap;
+			box-sizing: border-box;
+			animation: marquee 20s linear infinite;
+			-webkit-animation: marquee 20s linear infinite;
+		}
+		.marquee:hover {
+			animation-play-state: paused;
+			-webkit-animation-play-state: paused;
+		}
+		/* Make it move */
+		@-webkit-keyframes marquee {
+			0% {
+				text-indent: 27.5em
+			}
+			100% {
+				text-indent: -105em
+			}
+		}
+		/* Make it move */
+		@keyframes marquee {
+			0% {
+				text-indent: 27.5em
+			}
+			100% {
+				text-indent: -105em
+			}
+		}
+		/* Make it pretty */
+		.microsoft {
+			padding-left: 1.5em;
+			position: relative;
+			font: 16px'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+		}
+		/* Style the links */
+		.vanity {
+			color: #333;
+			text-align: center;
+			font: .75em'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+		}
+		.vanity a,
+		.microsoft a {
+			transition: color .5s;
+			text-decoration: none;
+		}
+		.vanity a:hover,
+		.microsoft a:hover {}
+		/* Style toggle button */
+		.toggle {
+			display: block;
+			margin: 2em auto;
+		}
+		p>a {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-46334574-1', 'aueb.gr');
+		ga('send', 'pageview');
+	</script>
+	<header class="header header--fixed headroom" id="mainheader">
+		<div><a href=""><img src="/assets/img/logo.jpg"/></a>
+		</div>
+		<div class="social hidden-xs">
+			<a href="https://www.linkedin.com/in/aueblinkedin" class="link linkedin" target="_blank"><span class="fa fa-linkedin"></span></a>
+			<a href="https://twitter.com/aueb" class="link twitter" target="_blank"><span class="fa fa-twitter"></span></a>
+			<a href="https://www.youtube.com/channel/UCPncunqp3bMuAHHeCikhalg" class="link youtube" target="_blank"><span class="fa fa-youtube"></span></a>
+			<a href="/pages/news/rss.php" class="link rss" target="_parent"><span class="fa fa-rss"></span></a>
+		</div>
+	</header>
+
+	<div class="container">
+		<style>
+	@media all and (min-width: 768px) {
+		.item {
+			width:720px;
+		}
+	}
+	@media all and (min-width: 992px) {
+		.item {
+			width: 960px;
+		}
+	}
+	@media all and (min-width: 1200px) {
+		.item {
+			width: 1140px;
+		}
+	}
+</style>
+
+<div id="myCarousel" class="carousel slide carousel-fade hidden-print hidden-xs" style="height: 150px;" data-ride="carousel" data-interval="5000">
+	<div u="slides" class="item" style="
+												 cursor: move; 
+												 position: absolute; 
+												 overflow: hidden; 
+												 left: 0px; top: 0px; 
+												 height: 150px;">
+												 
+												 
+		<div>
+			<a href="/opanews"><img src="/assets/img/banner/07_BannerOPANEWS_01.jpg" height="150"/></a>
+		</div>	
+		<div>
+			<a href="/opanews"><img src="/assets/img/banner/07_BannerOPANEWS_02.jpg" height="150"/></a>
+		</div>
+		<div>
+			<a href="/opanews"><img src="/assets/img/banner/07_BannerOPANEWS_03.jpg" height="150"/></a>
+		</div>
+		
+		
+		
+	</div>
+</div>
+		<style>
+	.dropdown:hover .dropdown-menu {
+		display: block;
+	}
+	.dropdown-menu li a {
+		color: #eacbc8;
+		text-align: left;
+	}
+	.dropdown-menu li a:hover {
+		background-color: #eacbc8;
+	}
+	.dropdown-menu {
+		background-color: #9e1c20;
+		border: 0;
+	}
+</style>
+<nav class="navbar navbar-default hidden-xs hidden-print" role="navigation">
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<style>
+	a {
+		word-wrap:break-word;
+	}
+</style>
+<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/about/index.php" target="_top">Για το Πανεπιστήμιο</a>
+	<ul class="dropdown-menu">
+		<li class=""><a href="/pages/about/xairetismos.php"> Χαιρετισμός Πρύτανη</a>
+		</li>
+		<li class=""><a href="/pages/about/history.php">Ιστορική Αναδρομή</a>
+		</li>
+		<li class=""><a href="/pages/about/dioikhsh.php">Οργάνωση - Λειτουργία - Διοίκηση</a>
+		</li>
+		<li class=""><a href="/pages/about/opakosmos.php">Το ΟΠΑ στον κόσμο</a>
+		</li>
+		<li class=""><a href="/pages/about/egkatastaseis.php">Εγκαταστάσεις &amp; Πρόσβαση</a>
+		</li>
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/spoudes/index.php" target="_top">Σχολές &amp; Τμήματα</a>
+	<ul class="dropdown-menu">
+		<li class=""><a href="#">Σχολή Οικονομικών Επιστημών</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=3">Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών </a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=2">Τμήμα Οικονομικής Επιστήμης</a>
+		</li>
+		<li class=""><a href="#">Σχολή Διοίκησης Επιχειρήσεων</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=7">Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=4">Τμήμα Οργάνωσης και Διοίκησης Επιχειρήσεων</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=6">Τμήμα Λογιστικής και Χρηματοοικονομικής</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=5">Τμήμα Μάρκετινγκ και Επικοινωνίας</a>
+		</li>
+		
+		
+		<li class=""><a href="#">Σχολή Επιστημών και Τεχνολογίας της Πληροφορίας</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=8">Τμήμα Πληροφορικής</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=9" class="current">Τμήμα Στατιστικής</a>
+		</li>
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/metaptyxiaka/index.php" target="_top">Μεταπτυχιακά</a>
+	<ul class="dropdown-menu">
+		<li class=""><a href="/pages/metaptyxiaka/full-time.php">Πλήρους Φοίτησης (full-time)</a>
+		</li>
+		<li class=""><a href="/pages/metaptyxiaka/part-time.php">Mερικής Φοίτησης (part-time)</a>
+		</li>
+		<li class=""><a href="/pages/metaptyxiaka/diapanepisthmiaka.php">Σε Συνεργασία με άλλα Πανεπιστήμια</a>
+		</li>
+		<li class=""><a href="/docs/Neos-Kanonismos-PMS.pdf" target="_new">Κανονισμός Λειτουργίας Προγραμμάτων Μεταπτυχιακών &amp; Διδακτορικών Σπουδών</a>
+		</li>
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/erevna/index.php" target="_top">Έρευνα</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/erevna/ergasthria.php">Ερευνητικά Εργαστήρια</a>
+		</li>
+		<li><a href="/pages/erevna/didaktorika.php">Διδακτορική   Έρευνα</a>
+		</li>
+		<li><a href="/pages/erevna/elkeopa.php">ΕΙΔΙΚΟΣ ΛΟΓΑΡΙΑΣΜΟΣ ΚΟΝΔΥΛΙΩΝ ΕΡΕΥΝΑΣ (ΕΛΚΕ)</a>
+		</li>
+		<li><a href="/pages/erevna/diamesolavisi.php">Γραφείο   Διαμεσολάβησης</a>
+		</li>
+		<li><a href="/pages/erevna/enisxisi.php">Πρόγραμμα Ενίσχυσης Έρευνας</a>
+		</li>
+		<li><a href="http://irakleitos.aueb.gr/" target="_blank">Πρόγραμμα Ηράκλειτος ΙΙ</a>
+		</li>
+		<li><a href="/pages/erevna/anakoinoseis.php">Ανακοινώσεις Ερευνητικών Ομάδων</a>
+		</li>
+		<li><a href="/pages/erevna/aristeias.php">Λίστες Αριστείας Τμημάτων</a>
+		</li>
+	</ul>
+</li>
+<!--<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/didaktiko/index.php" target="_top">Διδακτικό Προσωπικό</a>
+	<ul class="dropdown-menu">
+		<li class=""><a href="/pages/didaktiko/mitroa.php" class="current">Μητρώα εσωτερικών μελών επιτροπών επιλογής &amp; εξέλιξης καθηγητών</a>
+		</li>
+		<li class=""><a href="/pages/didaktiko/mitroa-exoterika.php" class="current">Μητρώα εξωτερικών μελών Πανεπιστημίων της ημεδαπής</a>
+		</li>
+	</ul>
+</li>-->
+<li>
+	<a href="/pages/didaktiko/index.php" target="_top">Διδακτικό Προσωπικό</a>
+</li>
+<li>
+	<a href="/pages/diaviou/index.php" target="_top">ΚΕΚ</a>
+</li>
+<li>
+	<a href="/pages/contact/index.php" target="_top">Επικοινωνία</a>
+</li>
+		</ul> 
+		<ul class="nav navbar-nav navbar-right hidden-sm flags" style="margin-right: 5px;">
+			<li><a href="/index.php"><img src="/assets/img/GR.png" class="img-responsive" style="width: 32px;"></a>
+			</li>
+			<li><a href="/index_en.php"><img src="/assets/img/EN.png" class="img-responsive" style="width: 32px;"></a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 sidebar-left">
+				?<div class="hidden-print" style="margin-top: -20px;">
+			<div class="row visible-xs"">
+			<div> 
+			<a href="/opanews"><img class="img-all" src="/assets/img/banner/07_BannerOPANEWS_01.jpg" height="70"/></a>
+			</div>
+		
+			<div class="pull-left" style="margin-left: 20px;">
+				<a href="/index.php"><img src="/assets/img/GR.png" class="img-responsive" style="width: 32px;"></a>
+			</div>
+			<div class="pull-left">
+				<a href="/index_en.php"><img src="/assets/img/EN.png" class="img-responsive" style="width: 32px;"></a>
+			</div>
+		</div>
+		
+	
+    <!-- Go to your Addthis.com Dashboard to update any options -->
+<!--    <div class="addthis_horizontal_follow_toolbox" id="addthis" style="padding:0px;border:0px;"></div>-->
+
+    <!-- Google CSE Search Box Begins  -->
+    <form action="/pages/results" id="searchbox_006260578783948215331:kfieklizdvk" role="search" style="margin-top: 10px;">
+        <input type="hidden" name="cx" value="006260578783948215331:kfieklizdvk" />
+        <input type="hidden" name="cof" value="FORID:11" />
+        <div class="form-group">
+            <input type="text" name="q" placeholder="Αναζητηση" class="form-control">
+        </div>
+    </form>
+
+    <!--<form role="search">
+        <div class="form-group">
+            <input type="text" placeholder="Αναζητηση" class="form-control">
+        </div>
+    </form>-->
+
+    <h2>Γρηγορη Προσβαση</h2>
+
+    <ul class="list-unstyled">
+		<li><a href="https://uregister.aueb.gr/" target="_new">URegister</a>
+        </li>
+        <li><a href="http://eclass.aueb.gr/" target="_new">e-Class</a>
+        </li>
+        <li><a href="http://e-grammateia.aueb.gr/unistudent" target="_new">e-Γραμματεία</a>
+        </li>
+        <li><a href="https://webmail.aueb.gr" target="_new">Webmail</a>
+        </li>
+        <li><a href="http://dias.aueb.gr:8100" target="_new">Webmail Προπτυχιακών</a>
+        </li>
+        <li><a href="/pages/help/" target="_self">Δικτυακή Βοήθεια</a>
+        </li>
+        <li><a href="http://e-grammateia.aueb.gr:8080/cem-el.htm" target="_blank">Επικοινωνία για Θέματα Εκπαίδευσης</a>
+        </li>
+        <li><a href="https://www-misc.aueb.gr/logistics/" target="_blank">Σύστημα Δήλωσης Βλαβών</a>
+        </li>
+    </ul>
+
+    <ul class="nav hidden-xs">
+        <li class="second dropdown-submenu">
+	<a href="#">Ανακοινώσεις</a>
+	<ul class="dropdown-menu">
+		<li class="second dropdown-submenu"><a style="width: 288px;" href="#">Ακαδημαϊκών Προγραμμάτων</a>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="more" href="/pages/news/anakoinoseis_list.php?catid=3">Προπτυχιακών Τμημάτων</a>
+				</li>
+				<li><a class="more" href="/pages/news/anakoinoseis_list.php?catid=16">Μεταπτυχιακών Προγραμμάτων</a>
+				</li>
+				<li><a class="more" href="/pages/news/anakoinoseis_list.php?catid=18">Διδακτορικών Προγραμμάτων</a>
+				</li>
+			</ul>
+		</li>
+		<li class="second dropdown-submenu">
+			<a href="#" style="width: 288px;">Ανακοινώσεις ΟΠΑ</a>
+			<ul class="dropdown-menu">
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=2">Πρυτανείας</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=12">Συγκλήτου</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=31">Συμβουλίου</a>
+				</li>
+			</ul>
+		</li>
+		<li class="second dropdown-submenu">
+			<a style="width: 288px;" href="#">Άλλες Ανακοινώσεις </a>
+			<ul class="dropdown-menu">
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=20">Συλλόγων</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=24">Εκλογές Μελών Συμβουλίου ΟΠΑ</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=28">Εκλογές Κοσμητόρων</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=29">Εκλογές Προέδρων Τμημάτων</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=21">Άλλων Φορέων ή Ιδρυμάτων</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=23">Yποτροφίες και Βραβεία</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu"><a href="#">Προκηρύξεις</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/news/dep_anakoinoseis.php">Διδακτικού Προσωπικού</a>
+		</li>
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=13">Λοιπών Θέσεων Εργασίας</a>
+		</li>
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=22">Προμηθειών, Υπηρεσιών και Έργων</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu"><a href="#">Εκδηλώσεις</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=8">Συνέδρια, Ομιλίες, Ημερίδες</a>
+		</li>
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=19">Ορκωμοσίες, Αποφοιτήσεις, Τελετές</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu"><a href="#">Αρχείο</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=917"> Ειδήσεων Πανεπιστημίου</a>
+		</li>
+		<li><a href="/pages/news/palies_anakoinoseis.php"> Παλαιότερων Ανακοινώσεων</a>
+		</li>
+		<!--<li><a href="/pages/news/anakoinoseis_list.php?catid=14">Δελτία Τύπου</a>
+		</li>-->
+		<li><a href="/pages/news/publications.php?catid=925">Δημοσιεύσεων</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/foithsh/index.php" target="_top">Φοίτηση και Σπουδαστικά</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/foithsh/opa.php">Η φοίτηση στο ΟΠΑ</a>
+		</li>
+		<li><a target="_new" href="/pages/news/attachments/2441_11.12.15.pdf">Πρόγραμμα Διδασκαλίας</a>
+		</li>
+		<li><a href="/pages/foithsh/lesxi.php">Φοιτητική Λέσχη</a>
+		</li>
+		<li><a href="/pages/foithsh/merimna.php">Φοιτητική Μέριμνα</a>
+		</li>
+		<li><a href="/pages/foithsh/yphresies.php">Υπηρεσίες για τον Φοιτητή</a>
+		</li>
+		<li><a href="/pages/foithsh/syggrammata.php">Συγγράμματα</a>
+		</li>
+	</ul>
+</li>
+<li class="second">
+	<a href="/pages/library/index.php" target="_top">Βιβλιοθήκη</a>
+</li>
+<li class="second">
+	<a href="/pages/e-learning/index.php" target="_top">Ηλεκτρονική Μάθηση</a>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/yphresies/index.php" target="_top">Διοικητικές Υπηρεσίες</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/yphresies/axiopoihsh.php">Εταιρεία Αξιοποίησης και Διαχ/σης<br /> της Περιουσίας του ΟΠΑ</a>
+		</li>
+		<li><a href="/pages/yphresies/ekdoseis.php">Εκδόσεις ΟΠΑ</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/erasmus/index.php" target="_top">Πρόγραμμα Έρασμος</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/erasmus/StaffTrainingWeek.php">Erasmus Staff Training Week</a>
+		</li>
+		<li><a href="/docs/Erasmus-Charter-for-Higer-Education.pdf" target="_new">Erasmus Charter for Higher Education</a>
+		</li>
+		<li><a href="/docs/Erasmus-Policy-Statement.pdf" target="_new">Erasmus Policy Statement</a>
+		</li>
+		
+		<li><a href="#">Οδηγός Προγράμματος Erasmus <span style="color:#f9da4b">(υπό επικαιροποίηση)</span></a>
+		</li>
+		<li><a href="/pages/erasmus/euroUnivers.php">Συνεργαζόμενα Ευρωπαϊκά Πανεπιστήμια</a>
+		</li>
+		<li><a href="/pages/erasmus/Erasmus+Pinakas-Rois-foit-kinitikotitas-2015-16.pdf" target="_blank">Πίνακας Ροής Φοιτητικής Κινητικότητας 2015-2016 <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/PinakasRois2014-2015.pdf" target="_blank">Πίνακας Ροής Φοιτητικής Κινητικότητας 2014-2015</a>
+		</li>
+		<li><a href="/pages/erasmus/Learning-Agreement-for-studies.doc" target="_blank">Learning Agreement for studies  <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/Student-Application-Form-Outgoing.doc" target="_blank">Student Application Form <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/Transcript-of-Records.doc" target="_blank">Transcript of Records  <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/docs/Epimorfosi-prosopikou-Erasmus+Omilos-OPA-Dec15.pdf" target="_blank">Κινητικότητα Διδακτικού & Διοικητικού Προσωπικού για Επιμόρφωση <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/docs/Programma-Omilou-Prakt-Ask-Erasmus+foitites-2015-16.pdf">Όμιλος Πρακτικής Άσκησης Erasmus+/ΟΠΑ <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="http://www.esnathens.gr" target="_blank">Σύλλογος φοιτητών Erasmus</a>
+		</li>
+		<li><a href="/docs/ECTS_User_Guide_10.pdf" target="_blank"> ECTS Users’ Guide</a>
+		</li>
+	</ul>
+</li>
+<li class="second">
+	<a href="/pages/organoseis/index.php" target="_top">Οργ. Φοιτητών, Αποφοίτων</a>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/ath-pol/index.php" target="_top">Αθλητικές και <br>Πολιτιστικές Δραστηριότητες</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/ath-pol/athlitikes.php">Αθλητικές Δραστηριότητες</a>
+		</li>
+		<li><a href="/pages/ath-pol/politistikes.php">Πολιτιστικές Δραστηριότητες</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/env-pol/index.php" target="_top">Περιβαλλοντική Πολιτική</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/env-pol/env1.php">Εισαγωγή φυσικού αερίου</a>
+		</li>
+		<li><a href="/pages/env-pol/env2.php">Μείωση κατανάλωσης ενέργειας</a>
+		</li>
+		<li><a href="/pages/env-pol/env3.php">Διεργασίες ανακύκλωσης υλικών</a>
+		</li>
+		<li><a href="/pages/env-pol/env4.php">Ηλεκτρονικές διαδικασίες / eClass</a>
+		</li>
+		<li><a href="/pages/env-pol/env5.php">Κώδικας Περιβαλλ. Δεοντολογίας</a>
+		</li>
+	</ul>
+</li>    </ul>
+
+    <a class="hidden-xs" href="http://www.aueb.gr/pages/organoseis/#AIESEC"><img class="img-all" src="/assets/img/aiesec.jpg" /></a>
+
+    <!-- <img class="img-all" src="/assets/img/side-right.jpg" />-->
+</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 main-article">
+			<div>
+	<!--<div class="hidden-print">       
+	<a href="/pages/news/attachments/2516.pdf" target="_blank" style="padding:1px 0px;"><img class="img-all" src="/assets/img/banner_xeim_2015-2016.jpg"/></a>
+	</div>-->
+	
+	<!--<div class="hidden-print">       
+	<a href="http://www.aueb.gr/pages/foithsh/odigos/" style="padding:1px 0px;"><img class="img-all" src="/assets/img/protoeteis_homepage_v7.jpg"/></a>
+	</div>-->
+
+	<marquee width="100%" height="17" behavior="scroll" scrollamount="4">
+
+	<a href="http://www.aueb.gr/pages/foithsh/lesxi.php?anchor=16">Έναρξη νέων Τμημάτων εκμάθησης ξένων γλωσσών της Φοιτητικής Λέσχης! Δηλώστε συμμετοχή!</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	
+	<a href="pages/metaptyxiaka/metapt.php">Η περίοδος υποβολής των αιτήσεων για τα μεταπτυχιακά συνεχίζεται!</a></marquee>
+	
+	<h2>ΤΑ ΝΕΑ ΤΟΥ ΠΑΝΕΠΙΣΤΗΜΙΟΥ</h2>
+
+	<div class="row"><article class="col-lg-6"><p style="font-size:12px;"><img align=left class="side" src="/pages/news/images/2553.jpg" alt="photo" width="50" height="60" border="1" />Απονομή Notable Contributions to the Auditing Literature Award από την American Accounting Association στον Αν. Καθηγητή του Τμήματος ΟΔΕ κ. Κωνσταντίνο Καραμάνη   <a data-toggle="modal" data-target="#myModal2553">περισσότερα...</a> <br clear=left>
+	<div class="modal fade no-border" id="myModal2553" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog no-border">
+			<div class="modal-content no-border">
+				<div class="modal-header no-border">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Απονομή Notable Contributions to the Auditing Literature Award από την American Accounting Association στον Αν. Καθηγητή του Τμήματος ΟΔΕ κ. Κωνσταντίνο Καραμάνη </h4>
+				</div>
+				<div class="modal-body no-border">
+					<p>Η ερευνητική εργασία "Audit Effort and Earnings Management", προϊόν συνεργασίας του Αν. Καθηγητή του Τμήματος Οργάνωσης και Διοίκησης Επιχειρήσεων <a href="http://www.aueb.gr/pages/prosopiko/faculty_gr_short.php?facid=1059"target="_blank">κ. Κωνσταντίνου Καραμάνη</a> με τον Καθηγητή <a href="http://www.bath.ac.uk/management/faculty/clive-lennox.html"target="_blank">κ. Clive Lennox</a>, βραβεύθηκε πρόσφατα με το βραβείο «Notable Contributions to the Auditing Literature Award» του <a href="http://aaahq.org/"target="_blank">American Accounting Association</a>. </p>
+
+<p>Το βραβείο απονέμεται «σε αναγνώριση ερευνητικής εργασίας εξαιρετικής αξίας, με σημαντική συνεισφορά στην εκπαίδευση σε θέματα ελέγχου (audit) ή διασφάλισης (assurance) στην πρακτική ή στην έρευνα». Η εργασία, με δεδομένα αποκλειστικά από την ελεγκτική αγορά της Ελλάδος, διερεύνησε τη σχέση μεταξύ της προσπάθειας του ελεγκτή (ώρες ελέγχου) και της χειραγώγησης των κερδών. Δημοσιεύθηκε το 2008 στο <i>Journal of Accounting and Economics</i>, ένα από τα κορυφαία διεθνή περιοδικά της Λογιστικής.</p>
+				</div>
+				<div class="modal-footer no-border">
+					<p>16-12-2015 id:2553 </p>					<button type="button" class="btn btn-default" data-dismiss="modal">Κλείσιμο</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</p></article><article class="col-lg-6"><p style="font-size:12px;"><img align=left class="side" src="/pages/news/images/2551.jpg" alt="photo" width="50" height="60" border="1" />Φοιτητές του Προγράμματος Erasmus+ του ΟΠΑ λαμβάνουν την πρώτη θέση στον διεθνή διαγωνισμό "Gagnant - Meilleur - Stand - 2015" στο πλαίσιο της Έκθεσης Αnnual International Fair "Planet EM"   <a data-toggle="modal" data-target="#myModal2551">περισσότερα...</a> <br clear=left>
+	<div class="modal fade no-border" id="myModal2551" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog no-border">
+			<div class="modal-content no-border">
+				<div class="modal-header no-border">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Φοιτητές του Προγράμματος Erasmus+ του ΟΠΑ λαμβάνουν την πρώτη θέση στον διεθνή διαγωνισμό "Gagnant - Meilleur - Stand - 2015" στο πλαίσιο της Έκθεσης Αnnual International Fair "Planet EM" </h4>
+				</div>
+				<div class="modal-body no-border">
+					<p style="text-align:center"><b>"AUEB-GREECE: Best stand of the annual International Fair "Planet EM" - Strasburg, France"<br>
+(AUEB: Gagnant - Meilleur - Stand - 2015)</b></p>
+
+<p>Έντεκα φοιτητές του Οικονομικού Πανεπιστημίου Αθηνών (ΟΠΑ) σπουδάζουν κατά το τρέχον έτος, στο πλαίσιο του Προγράμματος Erasmus+, στο Πανεπιστήμιο του Στρασβούργου - School of Management (Εcole de Management Strasbourg - EM Strasbourg). Η εν λόγω Σχολή διοργανώνει σε ετήσια βάση την Έκθεση Αnnual International Fair "Planet EM", στην οποία εκπροσωπούνται χώρες από όλη την υφήλιο μέσω των φοιτητών τους. Στη φετινή έκθεση, που έλαβε χώρα προ ολίγων ημερών, συμμετείχαν 32 χώρες. Μοναδικός εκπρόσωπος της Ελλάδας ήταν το ΟΠΑ με τους παρακάτω φοιτητές του, οι οποίοι έλαβαν την πρώτη θέση στον διαγωνισμό για την καλύτερη παρουσίαση εκθεσιακού χώρου μέσα στην Έκθεση (Gagnant - Meilleur - Stand - 2015).
+</p>
+<p>Με ενημερωτικά έντυπα του Πανεπιστημίου και αναμνηστικά δώρα του Προγράμματος Erasmus+ προέβησαν στην προβολή του ΟΠΑ με ομαδικό πνεύμα και με τον πλέον άρτιο τρόπο, κάνοντας γνωστά τα προγράμματα σπουδών του Πανεπιστημίου σε προπτυχιακό και μεταπτυχιακό επίπεδο, εστιάζοντας στις ιδρυματικές του αξίες "Αριστεία, Καινοτομία, Εξωστρέφεια, Κοινωνική Προσφορά" σε περισσότερους από 150 ενδιαφερόμενους φοιτητές που επιθυμούν να μετάσχουν σε προγράμματα διεθνούς κινητικότητας. Αξίζει να σημειωθεί ότι, ο πατέρας ενός από τους φοιτητές απέστειλε πλήθος ελληνικών παραδοσιακών προϊόντων, ενισχύοντας με τον τρόπο αυτό την προβολή της χώρας μας στους φοιτητές των άλλων χωρών. 
+</p>
+<p>Η ως άνω διάκριση ενισχύει τη φήμη και το όνομα του ΟΠΑ στο Γαλλικό Business School, με το οποίο το ΟΠΑ διατηρεί πολυετείς σχέσεις άριστης συνεργασίας. Το Οικονομικό Πανεπιστήμιο Αθηνών, με ιδιαίτερη υπερηφάνεια, εκφράζει τα συγχαρητήριά του και τις ευχαριστίες του στους παρακάτω φοιτητές για την καθοριστική συμβολή τους στη διάκριση και τους εύχεται καλή επιτυχία στις σπουδές τους και στα μελλοντικά τους σχέδια.
+</p>
+<p><b><u>Ομάδα φοιτητών Erasmus Οικονομικού Πανεπιστημίου Αθηνών</u></b>
+<br />
+Αργυρού Ιωάννα		(Τμήμα Οργάνωση και Διοίκηση Επιχειρήσεων )<br />
+Γιόργο Βανέσσα 		(Τμήμα Μάρκετινγκ και Επικοινωνίας)<br />
+Ζαχαριά Αικατερίνη 		(Τμήμα Μάρκετινγκ και Επικοινωνίας)<br />
+Καραβερβέρη Ιωάννα 		(Τμήμα Μάρκετινγκ και Επικοινωνίας)<br />
+Καρακλή Άννα 			(Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών)<br />
+Κατσιγιάννης Φώτιος 		(Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας)<br />
+Κιντάκα Μιχαέλλα		(Τμήμα Οργάνωσης και Διοίκησης Επιχειρήσεων)<br />
+Μαυρογιάννης Δημήτριος 	(Τμήμα Μάρκετινγκ και Επικοινωνίας)<br />
+Πέππα Γαρυφαλιά 		(Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών)<br />
+Πιρπιρής Γρηγόριος 		(Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας)<br />
+Τατσάκης Νικόλαος 		(Τμήμα Μάρκετινγκ και Επικοινωνίας)</p>
+
+<p style="text-align:center">
+<img src="/pages/news/images/2551_a.jpg" hspace="10"width="550">
+</p>
+
+<p style="text-align:center">
+<img src="/pages/news/images/2551_b.jpg" hspace="10"width="550">
+</p>				</div>
+				<div class="modal-footer no-border">
+					<p>15-12-2015 id:2551 </p>					<button type="button" class="btn btn-default" data-dismiss="modal">Κλείσιμο</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</p></article></div><div class="row"><article class="col-lg-6"><p style="font-size:12px;"><img align=left class="side" src="/pages/news/images/2548.jpg" alt="photo" width="50" height="60" border="1" />Απονομή Best Paper Award στον Αν. Καθηγητή Κώστα Δράκο και τον υποψ. Διδάκτορα Πέτρο Αρβανίτη του Τμήματος ΛΟΧΡΗ στο 3rd Economics and Finance Conference του  International Institute of Social and Economic Sciences  <a data-toggle="modal" data-target="#myModal2548">περισσότερα...</a> <br clear=left>
+	<div class="modal fade no-border" id="myModal2548" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog no-border">
+			<div class="modal-content no-border">
+				<div class="modal-header no-border">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Απονομή Best Paper Award στον Αν. Καθηγητή Κώστα Δράκο και τον υποψ. Διδάκτορα Πέτρο Αρβανίτη του Τμήματος ΛΟΧΡΗ στο 3rd Economics and Finance Conference του  International Institute of Social and Economic Sciences</h4>
+				</div>
+				<div class="modal-body no-border">
+					<p>Οι κ.κ. <a href="http://www.aueb.gr/pages/prosopiko/faculty_gr_short.php?facid=1678"target="_blank">Κώστας Δράκος, Αν. Καθηγητής</a> του <a href="http://www.aueb.gr/pages/spoudes/spoudes_TMHMA.php?depid=6"target="_blank">Τμήματος Λογιστικής και Χρηματοοικονομικής</a> του ΟΠΑ και Πέτρος Αρβανίτης, υποψ. Διδάκτορας του ίδιου Τμήματος έλαβαν το <a href="http://www.iises.net/past-conferences/economic/3rd-economics-finance-conference-rome/page-best-paper-award-rome-4"target="_blank">Best Paper Award</a> για το άρθρο με τίτλο "The Net Stable Funding Ratio of US Bank Holding Companies: A Retrospective Analysis", που παρουσιάστηκε στο 3rd Economics and Finance Conference του International Institute of Social and Economic Sciences. </p>				</div>
+				<div class="modal-footer no-border">
+					<p>14-12-2015 id:2548 </p>					<button type="button" class="btn btn-default" data-dismiss="modal">Κλείσιμο</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</p></article><article class="col-lg-6"><p style="font-size:12px;"><img align=left class="side" src="/pages/news/images/2547.jpg" alt="photo" width="50" height="60" border="1" />Απονομή Quality of Policy Contribution Award από τη European Association of Agricultural Economics στην Αναπληρώτρια Καθηγήτρια Φοίβη Κουντούρη   <a data-toggle="modal" data-target="#myModal2547">περισσότερα...</a> <br clear=left>
+	<div class="modal fade no-border" id="myModal2547" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog no-border">
+			<div class="modal-content no-border">
+				<div class="modal-header no-border">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Απονομή Quality of Policy Contribution Award από τη European Association of Agricultural Economics στην Αναπληρώτρια Καθηγήτρια Φοίβη Κουντούρη </h4>
+				</div>
+				<div class="modal-body no-border">
+					<p>Η <a href="http://www.aueb.gr/pages/prosopiko/faculty_gr_short.php?facid=1094"target="_blank">Αναπληρώτρια Καθηγήτρια Φοίβη Κουντούρη</a> του <a href="http://www.aueb.gr/pages/spoudes/spoudes_TMHMA.php?depid=3"target="_blank">Τμήματος Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών</a> του ΟΠΑ έλαβε το Quality of Policy Contribution Award της <a href="http://www.eaae.org/Site2014/"target="_blank">European Association of Agricultural Economics</a> για το επιστημονικό άρθρο </p>
+
+<p>Genius, M., Koundouri, P., Nauges, C., &amp; Tzouvelekas, V. (2014). <br>
+Information transmission in irrigation technology adoption and diffusion: social learning, extension services, and spatial effects. <br>
+American Journal of Agricultural Economics, 96(1): 328-344<br>
+Downloadable from: <a href="http://ajae.oxfordjournals.org/content/96/1/328.full.pdf"target="_blank">http://ajae.oxfordjournals.org/content/96/1/328.full.pdf</a> </p>
+				</div>
+				<div class="modal-footer no-border">
+					<p>14-12-2015 id:2547 </p>					<button type="button" class="btn btn-default" data-dismiss="modal">Κλείσιμο</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</p></article></div><div class="row"><article class="col-lg-6"><p style="font-size:12px;"><img align=left class="side" src="/pages/news/images/2544.jpg" alt="photo" width="50" height="60" border="1" /> «Θραύσματα»/"Fragments" το θέμα του φετινού pre-event του TEDxAUEB (16/12/15)  <a data-toggle="modal" data-target="#myModal2544">περισσότερα...</a> <br clear=left>
+	<div class="modal fade no-border" id="myModal2544" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog no-border">
+			<div class="modal-content no-border">
+				<div class="modal-header no-border">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel"> «Θραύσματα»/"Fragments" το θέμα του φετινού pre-event του TEDxAUEB (16/12/15)</h4>
+				</div>
+				<div class="modal-body no-border">
+					<p style="text-align:center">
+  
+<img src="/pages/news/images/2544_a.jpg" hspace="10">
+
+
+<p style="text-align:center"><b>TEDxAUEB pre-event | «Θραύσματα»/"Fragments"</b><br>
+<i>Τετάρτη 16 Δεκεμβρίου 2015, Αμφιθέατρο Αντωνιάδου ΟΠΑ, 10:30 </i></p>
+
+<p>Το <a href="http://www.tedxaueb.com/"target="_blank">TEDxAUEB</a> συνεχίζεται για τέταρτη χρονιά και φέτος ξεκινά με ένα pre-event στις 16 Δεκεμβρίου στις 10:30 στο αμφιθέατρο Αντωνιάδου (Πατησίων 76, κεντρικό κτήριο) με θέμα τα «θραύσματα»/«fragments».
+</p>
+<p>Τρεις καταξιωμένοι στον χώρο τους ομιλητές θα αναλύσουν πώς η εικόνα μιας εύρωστης οικονομίας καταρρέει, ποιο είναι το ψυχολογικό τίμημα που καλούμαστε να πληρώσουμε και πώς από τα θραύσματα μπορούμε να χτίσουμε εκ νέου μια ελπιδοφόρα πραγματικότητα.
+</p>
+<p>Δηλώσεις Συμμετοχής: <a href="https://www.eventora.com/el/Events/tedxaueb-fragments-2"target="_blank">https://www.eventora.com/el/Events/tedxaueb-fragments-2</a> 
+</p>
+
+				</div>
+				<div class="modal-footer no-border">
+					<p>11-12-2015 id:2544 </p>					<button type="button" class="btn btn-default" data-dismiss="modal">Κλείσιμο</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</p></article><article class="col-lg-6"><p style="font-size:12px;"><img align=left class="side" src="/pages/news/images/2533.jpg" alt="photo" width="50" height="60" border="1" />Τελετή Παράδοσης - Παραλαβής της Πρυτανείας του Οικονομικού Πανεπιστημίου Αθηνών (8/12/15)  <a data-toggle="modal" data-target="#myModal2533">περισσότερα...</a> <br clear=left>
+	<div class="modal fade no-border" id="myModal2533" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog no-border">
+			<div class="modal-content no-border">
+				<div class="modal-header no-border">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Τελετή Παράδοσης - Παραλαβής της Πρυτανείας του Οικονομικού Πανεπιστημίου Αθηνών (8/12/15)</h4>
+				</div>
+				<div class="modal-body no-border">
+					<p style="text-align:center"><b>Τελετή Παράδοσης - Παραλαβής της Πρυτανείας</b></p>
+
+<p>Την Τρίτη, 8 Δεκεμβρίου 2015, ο Πρύτανης του Οικονομικού Πανεπιστήμιου Αθηνών Καθηγητής κ. Κωνσταντίνος Γάτσιος παρέδωσε την Πρυτανεία του Ιδρύματος στον νέο Πρύτανη Καθηγητή κ. Εμμανουήλ Γιακουμάκη.
+</p>
+<p>Ο απερχόμενος Πρύτανης, αφού ενημέρωσε τον νέο Πρύτανη για τα τρέχοντα θέματα του Πανεπιστημίου, ευχαρίστησε όλα τα μέλη της πανεπιστημιακής κοινότητας για τη συνεργασία τους και τη συμβολή τους στο έργο που επιτελέστηκε κατά τη διάρκεια της θητείας του. Εξέφρασε τη μεγάλη του ικανοποίηση για την ανάληψη της διοίκησης από τον νέο Πρύτανη, του ευχήθηκε κάθε επιτυχία στο δύσκολο έργο που αναλαμβάνει και έθεσε τον εαυτό του στη διάθεσή του.
+</p>
+<p>Ο νέος Πρύτανης ευχαρίστησε τον απερχόμενο Πρύτανη για το πλούσιο έργο του και την καθοριστική συμβολή του στις επιτυχίες και την πρόοδο του Ιδρύματος, δήλωσε δε ότι στις συνθήκες που διανύουμε απαιτείται ομοψυχία και ενεργή συμβολή από όλα τα μέλη της πανεπιστημιακής κοινότητας, ώστε το Πανεπιστήμιό μας να αποτελέσει παράγοντα εξόδου από την κρίση και αναγέννησης της χώρας μας. Τέλος, κάλεσε τα μέλη της πανεπιστημιακής κοινότητας σε μια κοινή προσπάθεια με στόχο να συνεχίσει το Πανεπιστήμιό μας να είναι κέντρο αριστείας, καινοτομίας, εξωστρέφειας και κοινωνικής προσφοράς.
+</p>
+
+<div class="image">
+<p align="center"><img src="/pages/news/images/2533_a.jpg" hspace="7" vspace="0" border="0" alt="">
+<div style="margin-top:-7px;"align="center"><small><i>Ο νέος Πρύτανης του ΟΠΑ Καθηγητής κ. Εμμανουήλ Γιακουμάκης με τον απερχόμενο Πρύτανη Καθηγητή κ. Κωνσταντίνο Γάτσιο
+</i></small>
+</div>
+</div>				</div>
+				<div class="modal-footer no-border">
+					<p>8-12-2015 id:2533 </p>					<button type="button" class="btn btn-default" data-dismiss="modal">Κλείσιμο</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</p></article></div><hr>
+	
+<h2>ΔΕΛΤΙΑ ΤΥΠΟΥ</h2>
+
+
+<p style="text-align:justify;"><a href="http://www.aueb.gr/pages/news/anakoinosi_item.php?catid=14&index=0">Τελετή Παράδοσης - Παραλαβής της Πρυτανείας</a></p>
+<br>
+<p style="text-align:right"><a href="http://www.aueb.gr/pages/news/anakoinoseis_list.php?catid=14">Αρχείο Δελτίων Τύπου</a></p>
+		
+<hr>	
+	
+<h2>ΔΙΑΛΕΞΕΙΣ ΔΙΑΚΕΚΡΙΜΕΝΩΝ ΟΜΙΛΗΤΩΝ</h2>
+
+
+<p style="text-align:justify;"><a href="http://www.aueb.gr/pages/news/anakoinosi_item.php?catid=32&index=0">Διάλεξη "Understanding Human Decision Making: Neuroeconomics and Beyond" από τον Dr. George Christopoulos, Assistant Professor, Nanyang Business School, NTU, Singapore</a></p><br>
+<p style="text-align:right"><a href="http://www.aueb.gr/pages/news/anakoinoseis_list.php?catid=32">Αρχείο Διαλέξεων Διακεκριμένων Ομιλητών</a></p>
+		
+<hr>
+
+</div>			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 sidebar-right">
+				<div class="hidden-print">
+	<ul class="nav hidden-xs">
+	<li>
+        <a href="http://www.aueb.gr/pages/ekloges-prutani/" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/ekloges_prytani.jpg" /></a>
+        </li>
+	  <li>
+            <a href="/pages/new-id/index.php" target="_blank" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/new-id-img.jpg" /></a>
+        </li>
+        <li>
+            <a href="/pages/organismos/index.php" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/sxedio_organismou.jpg" /></a>
+        </li>
+        <li>
+            <a href="/pages/suglhtos/index.php" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/stigmes_sygklitou.jpg" /></a>
+        </li>
+		 <li>
+            <a href="/pages/news/anakoinoseis_list.php?catid=31" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/sumvoulio.jpg" /></a>
+        </li>
+    </ul>
+
+    <ul class="nav visible-xs">
+		<li class="col-xs-6">
+			 <a href="http://www.aueb.gr/pages/ekloges-prutani/"><img class="img-all" src="/assets/img/home/ekloges_prytani.jpg" /></a>
+        </li>
+		<li class="col-xs-6">
+	         <a href="/pages/new-id/index.php"target="_blank"><img class="img-all" src="/assets/img/home/new-id-img.jpg" /></a>
+        </li>
+        <li class="col-xs-6">
+            <a href="/pages/organismos/index.php"><img class="img-all" src="/assets/img/home/sxedio_organismou.jpg" /></a>
+        </li>
+        <li class="col-xs-6">
+            <a href="/pages/suglhtos/index.php"><img class="img-all" src="/assets/img/home/stigmes_sygklitou.jpg" /></a>
+        </li> <li class="col-xs-6">
+            <a href="/pages/news/anakoinoseis_list.php?catid=31"><img class="img-all" src="/assets/img/home/sumvoulio.jpg" /></a>
+        </li>
+    </ul>
+
+    <h2>Eπίκαιρα</h2>
+    <a href="http://www.aueb.gr/pages/news/attachments/2558.pdf" class="red" target="_blank">Κλειστό το Οικονομικό Πανεπιστήμιο Αθηνών λόγω εργασιών την Πέμπτη 24, Τετάρτη 30, Πέμπτη 31 Δεκεμβρίου 2015 & Σάββατο 2 Ιανουαρίου 2016</a><br/>
+		<span style="font-size:11px;">22-12-2015 16:10</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/2545.pdf" class="red" target="_blank">Εγγραφές εισαγομένων αθλητών στην Τριτοβάθμια Εκπαίδευση Ακαδημαϊκού Έτους 2015-2016 από 11/12/2015 έως 23/12/2015.</a><br/>
+		<span style="font-size:11px;">11-12-2015 12:30</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/2257_dec15a.pdf" class="red" target="_blank">Πρόγραμμα Εκδηλώσεων Δεκεμβρίου 2015 </a><br/>
+		<span style="font-size:11px;">11-12-2015 18:00</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/2497_11.12.15.pdf" class="red" target="_blank">Πρόγραμμα Εξαμηνιαίων Εξετάσεων Περιόδου Ιανουαρίου - Φεβρουαρίου Ακαδ. Έτους 2015-2016</a><br/>
+		<span style="font-size:11px;">11-12-2015 14:20</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/2452.pdf" class="red" target="_blank">Ηλεκτρονικές Υπηρεσίες Προπτυχιακών Φοιτητών - Ενεργοποίηση Λογαριασμών</a><br/>
+		<span style="font-size:11px;">2-10-2015 15:45</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/2441_11.12.15.pdf" class="red" target="_blank">Ωρολόγιο Πρόγραμμα Διδασκαλίας χειμερινού εξαμήνου ακαδ. έτους 2015-16</a><br/>
+		<span style="font-size:11px;">11-12-2015 12:15</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/foithsh/docs/calendar15-16.pdf" class="red" target="_blank">Ακαδημαϊκό Ημερολόγιο Ακαδ. Έτους 2015-16 </a><br/>
+		<span style="font-size:11px;">15-6-2015 14:15</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/2267.pdf" class="red" target="_blank">Υποβολή αιτήσεων για τη χορήγηση φοιτητικού στεγαστικού επιδόματος</a><br/>
+		<span style="font-size:11px;">21-1-2015 17:00</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/docs/2392_Kanonismos_A41_June15.pdf" class="epikaira" target="_blank">Κανονισμός Λειτουργίας Αίθουσας Τηλεκπαίδευσης (Α41) </a><br/>
+		<span style="font-size:11px;">22-6-2015 15:30</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/v2/pages/paraxorisi-xoron/index.php" class="epikaira" target="_blank">Κανονισμός Παραχώρησης Χώρων για Εκδηλώσεις </a><br/>
+		<span style="font-size:11px;">7-11-2014 16:10</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/1749_a.pdf" class="epikaira" target="_blank">Κανονισμός Διεξαγωγής Εξετάσεων</a><br/>
+		<span style="font-size:11px;">10-6-2013 14:50</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/1693.pdf" class="epikaira" target="_blank">Σύμβουλος Ψυχικής Υγείας στο ΟΠΑ</a><br/>
+		<span style="font-size:11px;">15-4-2013 12:19</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/1038.pdf" class="epikaira" target="_blank">Θέματα ασφάλειας στα κτήρια<br>του ΟΠΑ σε περίπτωση έκτακτης ανάγκης</a><br/>
+		<span style="font-size:11px;">22-3-2011 13:50</span><hr style="margin-top:2px;margin-bottom:2px;"/><a href="http://www.aueb.gr/pages/news/attachments/882.pdf" class="epikaira" target="_blank">Απαγόρευση καπνίσματος σε δημόσιους χώρους <small>(ν.3868/2010)</small></a><br/>
+		<span style="font-size:11px;">1-9-2010 10:00</span><hr style="margin-top:2px;margin-bottom:2px;"/>    <ul class="nav hidden-xs">
+        <li>
+            <a href="/pages/diadiktuakes_dialexeis/index.php" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/seira_diadiktyakon.jpg" /></a>
+        </li>
+        <li>
+            <a href="http://schedule.aueb.gr/" target="_blank" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/yourprogr.jpg" /></a>
+        </li>
+        <li>
+            <a href="http://sites.diavgeia.gov.gr/aueb" target="_blank" style="margin-top:3px;padding:0px 0px;"><img class="img-all" style="margin-bottom:3px;" src="/assets/img/home/diavgeia.jpg" /></a>
+        </li>
+    </ul>
+    <ul class="nav visible-xs">
+        <li>
+            <a href="/pages/diadiktuakes_dialexeis/index.php" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/seira_diadiktyakon.jpg" /></a>
+        </li>
+        <li>
+            <a href="http://schedule.aueb.gr/" target="_blank" style="margin-top:3px;padding:0px 0px;"><img class="img-all" src="/assets/img/home/yourprogr.jpg" /></a>
+        </li>
+        <li>
+            <a href="http://sites.diavgeia.gov.gr/aueb" target="_blank" style="margin-top:3px;padding:0px 0px;"><img class="img-all" style="margin-bottom:3px;" src="/assets/img/home/diavgeia.jpg" /></a>
+        </li>
+    </ul>
+</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div>
+				<hr />
+				<center>
+<a href="http://modip.aueb.gr/" target="_blank"><img src="assets/img/news/modip.jpg"></a>
+<a href="http://irakleitos.aueb.gr/" target="_blank"><img src="assets/img/news/irakleitos-OPA.jpg"></a>
+
+<hr />
+
+<a href="http://www.confucius.aueb.gr/" target="_blank"><img src="assets/img/news/confucius.png"></a>
+<a href="/pages/yphresies/entypa.php"><img src="assets/img/news/entypa.png"></a>
+<a href="/pages/news/recentpublications.php?catid=25"><img src="assets/img/news/publics.png"></a>
+
+<hr />
+
+<a href="http://www.dasta.aueb.gr/" target="_blank"><img src="assets/img/news/1gr.jpg"></a>
+<a href="http://www.career.aueb.gr/" target="_blank"><img src="assets/img/news/2gr.jpg"></a>
+<a href="http://www.internship.aueb.gr/" target="_blank"><img src="assets/img/news/3gr.jpg"></a>
+<a href="http://www.mke.aueb.gr/" target="_blank"><img src="assets/img/news/4gr.jpg"></a>
+
+<hr />
+
+<h6 class="subtitle"><strong>Τιμητικές Διακρίσεις, Πιστοποιήσεις &
+Συμμετοχή του ΟΠΑ σε Ενώσεις - Οργανισμούς</strong></h6>
+
+<a href="http://www.eua.be/Home.aspx" target="_blank"><img src="assets/img/news/eua.jpg"></a>
+<a href="http://aueb.gr/docs/efqm.pdf" target="_blank"><img src="assets/img/news/aristeia.jpg"></a>
+
+<a href="http://modip.aueb.gr/pistopoihseis/27-prme" target="_blank"><img src="assets/img/news/prime.jpg"></a>
+<a href="http://www.aueb.gr/pages/about/opakosmos.php"><img src="assets/img/news/eduniversal.jpg"></a>
+<a href="http://modip.aueb.gr/pistopoihseis/28-ungc" target="_blank"><img src="assets/img/news/ungc.jpg"></a>
+
+<hr />
+
+<a href="http://aueb.gr/drasi" target="_blank"><img src="http://aueb.gr/drasi/images/prosfora.jpg"></a>
+<a href="http://art.aueb.gr/" target="_blank"><img src="assets/img/news/art.jpg"></a>
+<!--<a href="" target="_blank"><img src=""></a>
+<a href="" target="_blank"><img src=""></a>-->
+
+</center>
+
+			</div>
+		</div>
+
+		<div class="row footer">
+			<div class="visible-xs hidden-print container" style="background-color:#762124;" id="footer-menu">
+	<br />
+		<div class="social" style="">
+			<a href="https://www.linkedin.com/edu/school?id=12831" class="link linkedin" target="_parent"><span class="fa fa-linkedin"></span></a>
+			<a href="https://twitter.com/aueb" class="link twitter" target="_parent"><span class="fa fa-twitter"></span></a>
+			<a href="https://www.youtube.com/channel/UCPncunqp3bMuAHHeCikhalg" class="link youtube" target="_parent"><span class="fa fa-youtube"></span></a>
+			<a href="/pages/news/rss.php" class="link rss" target="_parent"><span class="fa fa-rss"></span></a>
+		</div>
+	<ul class="nav">
+		<style>
+	a {
+		word-wrap:break-word;
+	}
+</style>
+<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/about/index.php" target="_top">Για το Πανεπιστήμιο</a>
+	<ul class="dropdown-menu">
+		<li class=""><a href="/pages/about/xairetismos.php"> Χαιρετισμός Πρύτανη</a>
+		</li>
+		<li class=""><a href="/pages/about/history.php">Ιστορική Αναδρομή</a>
+		</li>
+		<li class=""><a href="/pages/about/dioikhsh.php">Οργάνωση - Λειτουργία - Διοίκηση</a>
+		</li>
+		<li class=""><a href="/pages/about/opakosmos.php">Το ΟΠΑ στον κόσμο</a>
+		</li>
+		<li class=""><a href="/pages/about/egkatastaseis.php">Εγκαταστάσεις &amp; Πρόσβαση</a>
+		</li>
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/spoudes/index.php" target="_top">Σχολές &amp; Τμήματα</a>
+	<ul class="dropdown-menu">
+		<li class=""><a href="#">Σχολή Οικονομικών Επιστημών</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=3">Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών </a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=2">Τμήμα Οικονομικής Επιστήμης</a>
+		</li>
+		<li class=""><a href="#">Σχολή Διοίκησης Επιχειρήσεων</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=7">Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=4">Τμήμα Οργάνωσης και Διοίκησης Επιχειρήσεων</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=6">Τμήμα Λογιστικής και Χρηματοοικονομικής</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=5">Τμήμα Μάρκετινγκ και Επικοινωνίας</a>
+		</li>
+		
+		
+		<li class=""><a href="#">Σχολή Επιστημών και Τεχνολογίας της Πληροφορίας</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=8">Τμήμα Πληροφορικής</a>
+		</li>
+		<li class="sub more"><a href="/pages/spoudes/spoudes_TMHMA.php?depid=9" class="current">Τμήμα Στατιστικής</a>
+		</li>
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/metaptyxiaka/index.php" target="_top">Μεταπτυχιακά</a>
+	<ul class="dropdown-menu">
+		<li class=""><a href="/pages/metaptyxiaka/full-time.php">Πλήρους Φοίτησης (full-time)</a>
+		</li>
+		<li class=""><a href="/pages/metaptyxiaka/part-time.php">Mερικής Φοίτησης (part-time)</a>
+		</li>
+		<li class=""><a href="/pages/metaptyxiaka/diapanepisthmiaka.php">Σε Συνεργασία με άλλα Πανεπιστήμια</a>
+		</li>
+		<li class=""><a href="/docs/Neos-Kanonismos-PMS.pdf" target="_new">Κανονισμός Λειτουργίας Προγραμμάτων Μεταπτυχιακών &amp; Διδακτορικών Σπουδών</a>
+		</li>
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/erevna/index.php" target="_top">Έρευνα</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/erevna/ergasthria.php">Ερευνητικά Εργαστήρια</a>
+		</li>
+		<li><a href="/pages/erevna/didaktorika.php">Διδακτορική   Έρευνα</a>
+		</li>
+		<li><a href="/pages/erevna/elkeopa.php">ΕΙΔΙΚΟΣ ΛΟΓΑΡΙΑΣΜΟΣ ΚΟΝΔΥΛΙΩΝ ΕΡΕΥΝΑΣ (ΕΛΚΕ)</a>
+		</li>
+		<li><a href="/pages/erevna/diamesolavisi.php">Γραφείο   Διαμεσολάβησης</a>
+		</li>
+		<li><a href="/pages/erevna/enisxisi.php">Πρόγραμμα Ενίσχυσης Έρευνας</a>
+		</li>
+		<li><a href="http://irakleitos.aueb.gr/" target="_blank">Πρόγραμμα Ηράκλειτος ΙΙ</a>
+		</li>
+		<li><a href="/pages/erevna/anakoinoseis.php">Ανακοινώσεις Ερευνητικών Ομάδων</a>
+		</li>
+		<li><a href="/pages/erevna/aristeias.php">Λίστες Αριστείας Τμημάτων</a>
+		</li>
+	</ul>
+</li>
+<!--<li class="dropdown">
+	<a class="dropdown-toggle" href="/pages/didaktiko/index.php" target="_top">Διδακτικό Προσωπικό</a>
+	<ul class="dropdown-menu">
+		<li class=""><a href="/pages/didaktiko/mitroa.php" class="current">Μητρώα εσωτερικών μελών επιτροπών επιλογής &amp; εξέλιξης καθηγητών</a>
+		</li>
+		<li class=""><a href="/pages/didaktiko/mitroa-exoterika.php" class="current">Μητρώα εξωτερικών μελών Πανεπιστημίων της ημεδαπής</a>
+		</li>
+	</ul>
+</li>-->
+<li>
+	<a href="/pages/didaktiko/index.php" target="_top">Διδακτικό Προσωπικό</a>
+</li>
+<li>
+	<a href="/pages/diaviou/index.php" target="_top">ΚΕΚ</a>
+</li>
+<li>
+	<a href="/pages/contact/index.php" target="_top">Επικοινωνία</a>
+</li>	</ul>
+</div>
+
+
+<div class="container visible-xs hidden-print" style="background-color:#762124;">
+	<ul class="nav">
+		<li class="second dropdown-submenu">
+	<a href="#">Ανακοινώσεις</a>
+	<ul class="dropdown-menu">
+		<li class="second dropdown-submenu"><a style="width: 288px;" href="#">Ακαδημαϊκών Προγραμμάτων</a>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="more" href="/pages/news/anakoinoseis_list.php?catid=3">Προπτυχιακών Τμημάτων</a>
+				</li>
+				<li><a class="more" href="/pages/news/anakoinoseis_list.php?catid=16">Μεταπτυχιακών Προγραμμάτων</a>
+				</li>
+				<li><a class="more" href="/pages/news/anakoinoseis_list.php?catid=18">Διδακτορικών Προγραμμάτων</a>
+				</li>
+			</ul>
+		</li>
+		<li class="second dropdown-submenu">
+			<a href="#" style="width: 288px;">Ανακοινώσεις ΟΠΑ</a>
+			<ul class="dropdown-menu">
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=2">Πρυτανείας</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=12">Συγκλήτου</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=31">Συμβουλίου</a>
+				</li>
+			</ul>
+		</li>
+		<li class="second dropdown-submenu">
+			<a style="width: 288px;" href="#">Άλλες Ανακοινώσεις </a>
+			<ul class="dropdown-menu">
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=20">Συλλόγων</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=24">Εκλογές Μελών Συμβουλίου ΟΠΑ</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=28">Εκλογές Κοσμητόρων</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=29">Εκλογές Προέδρων Τμημάτων</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=21">Άλλων Φορέων ή Ιδρυμάτων</a>
+				</li>
+				<li><a href="/pages/news/anakoinoseis_list.php?catid=23">Yποτροφίες και Βραβεία</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu"><a href="#">Προκηρύξεις</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/news/dep_anakoinoseis.php">Διδακτικού Προσωπικού</a>
+		</li>
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=13">Λοιπών Θέσεων Εργασίας</a>
+		</li>
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=22">Προμηθειών, Υπηρεσιών και Έργων</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu"><a href="#">Εκδηλώσεις</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=8">Συνέδρια, Ομιλίες, Ημερίδες</a>
+		</li>
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=19">Ορκωμοσίες, Αποφοιτήσεις, Τελετές</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu"><a href="#">Αρχείο</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/news/anakoinoseis_list.php?catid=917"> Ειδήσεων Πανεπιστημίου</a>
+		</li>
+		<li><a href="/pages/news/palies_anakoinoseis.php"> Παλαιότερων Ανακοινώσεων</a>
+		</li>
+		<!--<li><a href="/pages/news/anakoinoseis_list.php?catid=14">Δελτία Τύπου</a>
+		</li>-->
+		<li><a href="/pages/news/publications.php?catid=925">Δημοσιεύσεων</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/foithsh/index.php" target="_top">Φοίτηση και Σπουδαστικά</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/foithsh/opa.php">Η φοίτηση στο ΟΠΑ</a>
+		</li>
+		<li><a target="_new" href="/pages/news/attachments/2441_11.12.15.pdf">Πρόγραμμα Διδασκαλίας</a>
+		</li>
+		<li><a href="/pages/foithsh/lesxi.php">Φοιτητική Λέσχη</a>
+		</li>
+		<li><a href="/pages/foithsh/merimna.php">Φοιτητική Μέριμνα</a>
+		</li>
+		<li><a href="/pages/foithsh/yphresies.php">Υπηρεσίες για τον Φοιτητή</a>
+		</li>
+		<li><a href="/pages/foithsh/syggrammata.php">Συγγράμματα</a>
+		</li>
+	</ul>
+</li>
+<li class="second">
+	<a href="/pages/library/index.php" target="_top">Βιβλιοθήκη</a>
+</li>
+<li class="second">
+	<a href="/pages/e-learning/index.php" target="_top">Ηλεκτρονική Μάθηση</a>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/yphresies/index.php" target="_top">Διοικητικές Υπηρεσίες</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/yphresies/axiopoihsh.php">Εταιρεία Αξιοποίησης και Διαχ/σης<br /> της Περιουσίας του ΟΠΑ</a>
+		</li>
+		<li><a href="/pages/yphresies/ekdoseis.php">Εκδόσεις ΟΠΑ</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/erasmus/index.php" target="_top">Πρόγραμμα Έρασμος</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/erasmus/StaffTrainingWeek.php">Erasmus Staff Training Week</a>
+		</li>
+		<li><a href="/docs/Erasmus-Charter-for-Higer-Education.pdf" target="_new">Erasmus Charter for Higher Education</a>
+		</li>
+		<li><a href="/docs/Erasmus-Policy-Statement.pdf" target="_new">Erasmus Policy Statement</a>
+		</li>
+		
+		<li><a href="#">Οδηγός Προγράμματος Erasmus <span style="color:#f9da4b">(υπό επικαιροποίηση)</span></a>
+		</li>
+		<li><a href="/pages/erasmus/euroUnivers.php">Συνεργαζόμενα Ευρωπαϊκά Πανεπιστήμια</a>
+		</li>
+		<li><a href="/pages/erasmus/Erasmus+Pinakas-Rois-foit-kinitikotitas-2015-16.pdf" target="_blank">Πίνακας Ροής Φοιτητικής Κινητικότητας 2015-2016 <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/PinakasRois2014-2015.pdf" target="_blank">Πίνακας Ροής Φοιτητικής Κινητικότητας 2014-2015</a>
+		</li>
+		<li><a href="/pages/erasmus/Learning-Agreement-for-studies.doc" target="_blank">Learning Agreement for studies  <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/Student-Application-Form-Outgoing.doc" target="_blank">Student Application Form <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/Transcript-of-Records.doc" target="_blank">Transcript of Records  <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/docs/Epimorfosi-prosopikou-Erasmus+Omilos-OPA-Dec15.pdf" target="_blank">Κινητικότητα Διδακτικού & Διοικητικού Προσωπικού για Επιμόρφωση <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="/pages/erasmus/docs/Programma-Omilou-Prakt-Ask-Erasmus+foitites-2015-16.pdf">Όμιλος Πρακτικής Άσκησης Erasmus+/ΟΠΑ <span style="color:#f9da4b">ΝΕΟ</span></a>
+		</li>
+		<li><a href="http://www.esnathens.gr" target="_blank">Σύλλογος φοιτητών Erasmus</a>
+		</li>
+		<li><a href="/docs/ECTS_User_Guide_10.pdf" target="_blank"> ECTS Users’ Guide</a>
+		</li>
+	</ul>
+</li>
+<li class="second">
+	<a href="/pages/organoseis/index.php" target="_top">Οργ. Φοιτητών, Αποφοίτων</a>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/ath-pol/index.php" target="_top">Αθλητικές και <br>Πολιτιστικές Δραστηριότητες</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/ath-pol/athlitikes.php">Αθλητικές Δραστηριότητες</a>
+		</li>
+		<li><a href="/pages/ath-pol/politistikes.php">Πολιτιστικές Δραστηριότητες</a>
+		</li>
+	</ul>
+</li>
+<li class="second dropdown-submenu">
+	<a href="/pages/env-pol/index.php" target="_top">Περιβαλλοντική Πολιτική</a>
+	<ul class="dropdown-menu">
+		<li><a href="/pages/env-pol/env1.php">Εισαγωγή φυσικού αερίου</a>
+		</li>
+		<li><a href="/pages/env-pol/env2.php">Μείωση κατανάλωσης ενέργειας</a>
+		</li>
+		<li><a href="/pages/env-pol/env3.php">Διεργασίες ανακύκλωσης υλικών</a>
+		</li>
+		<li><a href="/pages/env-pol/env4.php">Ηλεκτρονικές διαδικασίες / eClass</a>
+		</li>
+		<li><a href="/pages/env-pol/env5.php">Κώδικας Περιβαλλ. Δεοντολογίας</a>
+		</li>
+	</ul>
+</li>	</ul>
+</div>
+
+<div class="container hidden-print">
+	<hr>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="col-md-12">
+				<p class="muted pull" style="text-align:center;">
+					<span style="font-size:12px;">Οικονομικό Πανεπιστήμιο Αθηνών, Πατησίων 76, ΤΚ 104 34 Αθήνα<br/>
+          Tηλεφωνικό Κέντρο: +302108203 911, e-mail: <a href="mailto:webmaster@aueb.gr">webmaster@aueb.gr</a></span>
+					<br />
+					<small>Για καλύτερη εμπειρία χρήσης χρησιμοποιήστε μία από τις τελευταίες εκδόσεις των φυλλομετρητών: Mozilla Firefox, Chrome, IE (Δεν υποστηρίζονται εκδόσεις πριν την 10).</small>
+					<br />© Copyright 1996 - 2015 | Athens University of Economics and Business
+				</p>
+			</div>
+		</div>
+	</div>
+</div>		</div>
+	</div>
+
+	<!--
+	<div class="modal fade" id="myModal" style="border-radius:0;">
+		<div class="modal-dialog" style="border-radius:0;">
+			<div class="modal-content" style="background-color:#762124; color:white; border-radius:0;">
+				<div class="modal-header" style="border: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;
+border: 1px solid;
+border-radius: 76px;
+width: 22px; opacity:1; font-weight: bold;">&times;</button>
+				</div>
+				<div class="modal-body" style="text-align:center; padding: 0;">
+					<div style="padding: 20px">
+						<h1>Καλώς ήρθατε</h1>
+						<h3 style="margin: 5px;">στον επίσημο ιστότοπο του</h3>
+						<h3 style="margin: 5px;">ΟΙΚΟΝΟΜΙΚΟΥ ΠΑΝΕΠΙΣΤΗΜΙΟΥ ΑΘΗΝΩΝ</h3>
+						<hr />
+						<h3 style="margin: 5px;">Ο ιστότοπος βρίσκεται στη διαδικασία</h3>
+						<h3 style="margin: 5px;">εναρμόνισής του</h3>
+						<h3 style="margin: 5px;">στην καινούρια Οπτική μας Ταυτότητα.</h3>
+						<hr />
+						<h3 style="margin: 5px;">Σας Ευχαριστούμε για την κατανόηση</h3>
+					</div>
+					<div style="height:100px; background-color:white; position: relative; bottom: -20px;">
+						<img src="/assets/img/logo_print.jpg" style="padding: 0;  height: 100px;" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+-->
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/remove_accents.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/headroom.min.js"></script>
+	<script type="text/javascript" src="/assets/js/jQuery.headroom.min.js"></script>
+	<script src="bower_components/jssor/jssor.slider.mini.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#mainheader").headroom({
+				"tolerance": 5,
+				"offset": 205,
+				"classes": {
+					"initial": "animated",
+					"pinned": "slideDown",
+					"unpinned": "slideUp",
+					"top": "headroom--top",
+					"notTop": "headroom--not-top"
+				}
+			});
+			var _SlideshowTransitions = [
+            //Fade
+				{
+					$Duration: 1200,
+					$Opacity: 2
+				}
+            ];
+
+			var options = {
+				$SlideDuration: 800, //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+				$DragOrientation: 3, //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+				$AutoPlay: true, //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+				$AutoPlayInterval: 1500, //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+				$SlideshowOptions: { //[Optional] Options to specify and enable slideshow or not
+					$Class: $JssorSlideshowRunner$, //[Required] Class to create instance of slideshow
+					$Transitions: _SlideshowTransitions, //[Required] An array of slideshow transitions to play slideshow
+					$TransitionsOrder: 1, //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+					$ShowLink: true //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+				}
+			};
+			var jssor_slider1 = new $JssorSlider$('myCarousel', options);
+		});
+
+		 //$('#myModal').modal('show');
+	</script>
+</body>
+
+</html>
