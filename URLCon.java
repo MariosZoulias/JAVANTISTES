@@ -20,7 +20,7 @@ public class URLCon {
 	BufferedReader in = new BufferedReader(new InputStreamReader( y_c.getInputStream(),encoding)); //To encoding einai gia ta ellinika
 
        	try{
-		File file = new File("html.txt"); //to arxeio ftiaxnetai ston idio fakelo me tis klasseis
+		File file = new File("m.txt"); //to arxeio ftiaxnetai ston idio fakelo me tis klasseis
 
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
