@@ -94,10 +94,7 @@ public class WebBrowser extends JFrame implements ActionListener {
 //an brei tag a (dld "<a" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
 										printText(tag_1.p(line));
 									}
-									if(line.contains("<ul")){
-//an brei tag li (dId "<li") tote kalei kai aksiopoiei th me8odo li ths Tags_1
-										printText(tag_1.li(line));
-								        }
+								        //h <ul> den xreiazetai, kathoti h <li> einai hdh arketh
 								        if(line.contains("<li")){
 //an brei tag li (dId "<li") tote kalei kai aksiopoiei th me8odo li ths Tags_1
 										printText("   *" + tag_1.li(line));
