@@ -71,7 +71,7 @@ public class WebBrowser extends JFrame implements ActionListener {
 			Tags_1 tag_1 = new Tags_1();
 							try{
 //kanei thn idia douleia me to arxeio java.java dhladh diabazei ton kwdika grammh grammh
-								FileInputStream fstream= new FileInputStream("html.txt");//specify document name
+								FileInputStream fstream= new FileInputStream("m.txt");//specify document name
 								DataInputStream in= new DataInputStream(fstream);
 								BufferedReader br=new BufferedReader(new InputStreamReader(in , encoding));
 
