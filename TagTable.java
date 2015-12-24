@@ -137,7 +137,6 @@ public class TagTable {
 
 		// posa kelia exei i megaliteri grammi
 		for (int i = 0; i < pinakas.length; i++) {
-			System.out.println(pinakas[i].length);
 			if (pinakas[i].length > column) {
 				column = pinakas[i].length;
 			}
