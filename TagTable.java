@@ -1,69 +1,63 @@
+package project;
+
 /*
-*o kodikas douleuei alla tha ton ksananebaso molis ton simazepso ligo kai prostheso kapia pragmata
+*o kodikas einai etimos
 *
-*ti thelo na prostheso:
-* + to tag caption (o titlos tou table)
-* --(exo ftiaksei to programma pou to bgazei ton titlo alla den to emfanizei akoma)
-* + opou briskei to tag <th> na emfaniezei me kefalea to periexomeno tou tag
+*opou briksei to tag <th> bazei asterakia ston pinaka
 *
-*Eos tis 23/12/2015 tha einai etimo
 *
 */
 
 import javax.swing.JTable;
 import javax.swing.JFrame;
-import javax.swing.JScrollPane;
-import java.awt.BorderLayout;
-import java.util.ArrayList;
-import java.util.Vector;
+import javax.swing.border.TitledBorder;
+import javax.swing.*;
 
 public class TagTable {
 
 	public static void main(String[] argv) throws Exception {
 
-		// Diabazei to tag*******
-
-		String tag = "<table style=width:100%> " + "<tr> " + "<th>Firstname</th>" + "<th>Lastname</th> "
-				+ "<th>Points</th>" + "</tr>" + "<tr>" + "<td>Eve</td>" + "<td>Jackson</td> " + "<td>94</td>" + "</tr>"
-				+ "</table>";
-
-		// to mikos tou tag pou isix8ei
+		String tag = "<table> " + "<caption>This is the caption</caption>" + "<tr> " + "<td>gr1-kel1</td>" + " <td>gr1-kel2</td>" + " <td>gr1-kel3</td>" + "</tr>"
+				+ "<tr>" + "<td>gr2-kel1</td>" + "<td>gr2-kel2</td>" + "</tr></table>";
 
 		String caption = "<caption>";
-		int thesiNow = 0;
+		String endCaption = "</caption>";
 		String tr = "<tr>";
 		String trEnd = "</tr>";
-		String tagNow;
+
+		int thesiNow = 0;
 		int thesiTelous;
-		String trTag;
 		int muchTr;
 		int muchRow;
 
-		// An to caption iparxei sto tag ftiaxnei ena String me to periexomeno
-		// tis etiketas
+		String tagNow;
+		String trTag;
+		String epikefalida = null;
+
+		// An iparxei caption ftiaxnei ton titlo tou pinaka
 		if (tag.contains(caption)) {
-			// i arxiki 8esi tou Caption mesa sto String
 			int capBegin = tag.indexOf(caption) + caption.length();
-			String endCaption = "</caption>";
-			// i teliki 8esi tou Caption
 			int capend = tag.indexOf(endCaption);
 
-			String epikefalida = tag.substring(capBegin, capend);
+			epikefalida = tag.substring(capBegin, capend);
 
 			thesiNow = capend + endCaption.length();
-			tagNow = getTagNow(thesiNow, tag.length(), tag);
-			// System.out.println(tagNow);
+
+			// to tagNow periexei olo to tag apo to telous tou caption
+			tagNow = tag.substring(thesiNow, tag.length());
 		} else {
 			thesiNow = tag.indexOf(tr);
-			tagNow = getTagNow(thesiNow, tag.length(), tag);
-			// System.out.println(tagNow);
+			tagNow = tag.substring(thesiNow, tag.length());
 		}
 
-		// Poses grammes exei to
-		// tag*******************************************************
-		// Ftiaxnei tis stiles tou pinaka
+		// poses grammes exei o pinakas
 		muchTr = getMuchTr(tagNow);
+
+		// exei ta stoixeia tou pinaka
 		String[][] pinakas = new String[muchTr][];
+		// se pies thesei exei epikefalides
+		int[][] pinArTag = new int[muchTr][];
+
 		int howRow = 0;
 
 		int indexTh;
@@ -72,108 +66,122 @@ public class TagTable {
 		int indexEndTh;
 		int indexEndTd;
 
-		String rowString;
-
 		thesiTelous = tagNow.indexOf(trEnd);
-		trTag = getTagNow(0, thesiTelous, tagNow);
 
+		// pernei to tag pou anaferete stin proti seira
+		trTag = tagNow.substring(0, thesiTelous);
+
+		// periexei olo to apo to telous tis proigoumeneis seiras
 		tagNow = tagNow.substring(thesiTelous + 5);
-		try {
 
-			while (trTag.contains(tr)) {
+		while (trTag.contains(tr)) {
 
-				int countRow = 0;
-				String st = null;
-				indexTh = 0;
-				indexTd = 0;
-				muchRow = getTrTag(trTag);
-				int countTr = 0;
+			int countRow = 0;
 
-				pinakas[howRow] = new String[muchRow];
+			indexTh = 0;
+			indexTd = 0;
 
-				while (indexTh != -1 || indexTd != -1) {
+			String st = null;
 
-					indexTh = trTag.indexOf("<th>");
-					indexTd = trTag.indexOf("<td>");
+			// posa kelia exei i grammi
+			muchRow = getTrTag(trTag);
 
-					if (indexTh == -1) {
-						indexTh = trTag.length() + 1;
-					} else if (indexTd == -1) {
-						indexTd = trTag.length() + 1;
-					}
+			pinakas[howRow] = new String[muchRow];
+			pinArTag[howRow] = new int[muchRow];
 
-					if (indexTh < indexTd && indexTh != -1) {
-						indexEndTh = trTag.indexOf("</th>");
+			while (indexTh != -1 || indexTd != -1) {
 
-						st = trTag.substring(indexTh + 4, indexEndTh);
-						trTag = trTag.substring(indexEndTh + 1);
+				indexTh = trTag.indexOf("<th>");
+				indexTd = trTag.indexOf("<td>");
 
-					} else if (indexTd < indexTh && indexTd != -1) {
-						// I thesi pou telionei to tag
-						indexEndTd = trTag.indexOf("</td>");
-						// ftiaxnei to onoma pou iparxei mesa sto tag
-
-						st = trTag.substring(indexTd + 4, indexEndTd);
-						trTag = trTag.substring(indexEndTd + 1);
-
-					}
-					pinakas[howRow][countRow] = st;
-
-					indexTh = trTag.indexOf("<th>");
-					indexTd = trTag.indexOf("<td>");
-					countRow++;
+				if (indexTh == -1) {
+					indexTh = trTag.length() + 1;
+				} else if (indexTd == -1) {
+					indexTd = trTag.length() + 1;
 				}
-				howRow++;
 
-				thesiTelous = tagNow.indexOf(trEnd);
-				trTag = getTagNow(0, thesiTelous, tagNow);
+				if (indexTh < indexTd && indexTh != -1) {
+					indexEndTh = trTag.indexOf("</th>");
 
-				indexTh = tagNow.indexOf("<th>");
-				indexTd = tagNow.indexOf("<td>");
+					st = trTag.substring(indexTh + 4, indexEndTh);
+					trTag = trTag.substring(indexEndTh + 1);
+					pinArTag[howRow][countRow] = 1;
+				} else if (indexTd < indexTh && indexTd != -1) {
+					// I thesi pou telionei to tag
+					indexEndTd = trTag.indexOf("</td>");
 
-				tagNow = tagNow.substring(thesiTelous);
-
-			}
-
-			/*******************************************************************************/
-
-			int column = 0;
-
-			for (int i = 0; i < pinakas.length; i++) {
-				if (pinakas[i].length > column) {
-					column = pinakas[i].length;
+					// ftiaxnei to onoma pou iparxei mesa sto tag
+					st = trTag.substring(indexTd + 4, indexEndTd);
+					trTag = trTag.substring(indexEndTd + 1);
+					pinArTag[howRow][countRow] = 0;
 				}
+				pinakas[howRow][countRow] = st;
+
+				indexTh = trTag.indexOf("<th>");
+				indexTd = trTag.indexOf("<td>");
+				countRow++;
 			}
-		
+			howRow++;
 
-			JFrame frame = new JFrame();
-			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			thesiTelous = tagNow.indexOf(trEnd);
+			trTag = tagNow.substring(0, thesiTelous);
 
-			JTable table = new JTable(howRow, column);
-			table.setTableHeader(null);
-			JScrollPane scrollPane = new JScrollPane(table);
-			frame.add(scrollPane, BorderLayout.CENTER);
-			frame.setSize(300, 150);
-			frame.setVisible(true);
+			indexTh = tagNow.indexOf("<th>");
+			indexTd = tagNow.indexOf("<td>");
 
-			for (int i = 0; i < howRow; i++) {
-				for (int y = 0; y < pinakas[i].length; y++) {
+			tagNow = tagNow.substring(thesiTelous);
+
+		}
+
+		int column = 0;
+
+		// posa kelia exei i megaliteri grammi
+		for (int i = 0; i < pinakas.length; i++) {
+			System.out.println(pinakas[i].length);
+			if (pinakas[i].length > column) {
+				column = pinakas[i].length;
+			}
+		}
+
+		JFrame frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		JPanel panel = new JPanel();
+		if (epikefalida != null) {
+			panel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), epikefalida,
+					TitledBorder.CENTER, TitledBorder.TOP));
+		}
+
+		JTable table = new JTable(howRow, column);
+		table.setTableHeader(null);
+		panel.add(table);
+
+		// table.setSize(500, 100);
+
+		frame.add(panel);
+		frame.setLocationRelativeTo(null);
+		frame.pack();
+		frame.setVisible(true);
+
+		// JScrollPane scrollPane = new JScrollPane(table);
+		// frame.add(scrollPane, BorderLayout.CENTER);
+		frame.setSize(300, 150);
+
+		for (int i = 0; i < howRow; i++) {
+			for (int y = 0; y < pinakas[i].length; y++) {
+
+				if (pinArTag[i][y] == 1) {
+					table.setValueAt("*" + pinakas[i][y] + "*", i, y);
+				} else {
 					table.setValueAt(pinakas[i][y], i, y);
 				}
+
 			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-
 		}
 
 	}
 
 	/********************************************************************************************/
-
-	public static String getTagNow(int thesi1, int thesi2, String tag) {
-		return tag.substring(thesi1, thesi2);
-	}
 
 	// Poses grames tha exei o pinakas
 	public static int getMuchTr(String tag) {
@@ -206,20 +214,16 @@ public class TagTable {
 			if (indexTh < indexTd) {
 
 				count++;
-				tag = tag.substring(indexTh + 5);
+				tag = tag.substring(indexTh + th.length());
 			} else {
 
 				count++;
-				tag = tag.substring(indexTd + 1);
+				tag = tag.substring(indexTd + td.length());
 			}
 			indexTh = tag.indexOf(th);
 			indexTd = tag.indexOf(td);
 
 		}
-		/*
-		 * for(int i = 0 ;i <=intList.size(); i++){
-		 * System.out.println(intList.get(i)); }
-		 */
 
 		return count;
 	}
