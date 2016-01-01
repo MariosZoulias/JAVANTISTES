@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3η Εργαστηριακή ασκηση Html-css-8140029</title>
+	<meta http-equiv="content-type" content="text/html; charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="exercise3_sub2_8140029.css">
+</head>
+
+
+<body> 
+<div id="wrapper" >
+ <p class="hf" ><a href="#k1">Εκπαίδευση&#124 </a><a href="#k2">Εργασιακή Εμπειρία&#124 </a><a href="#k3">Ξένες Γλώσσες&#124 </a><a href="#k4">Σεμινάρια&#124 </a><a href="#k5">Διακρίσεις-Βραβεία&#124 </a><a href="#k6">Γνώσεις Πληροφορικής&#124 </a><a href="#k7">Εργασίες&#124 </a><a href="#k8">Ενδιαφέροντα</a></p>
+   <h1>	Βιογραφικό σημείωμα </h1>
+     <p style="text-align:center;">   <img src="marios.jpg.JPG" alt="εγω" width="160" height="160"></p>
+
+   <table class="table1" border="1" >
+   
+    <tr>
+             <td><b>Oνοματεπώνυμο:</b></td>
+			 <td>Μαριος Ζουλιας</td>
+        </tr>
+        <tr>
+             <td><b>Ημερομηνία Γέννησης:</b></td>
+			 <td>09/12/1996</td>
+        </tr>
+        <tr>
+             <td><b>Διέυθυνση:</b></td>
+			 <td>Ηρακλειτου,54,αχαρναι,13672</td>
+        </tr>
+        <tr>
+             <td><b>Τηλέφωνο:</b></td>
+			 <td>21040651</td>
+        </tr>
+        <tr>
+            <td><b>E-mail:</b></td>
+			<td>t8140029@dias.aueb.gr</td>
+       </tr>
+ 
+
+  </table> 
+	<hr>
+	<div class="section"> 
+	<a id="k1"></a>
+  <h2> Εκπαίδευση </h2>
+  
+   <p style="text-align:left;"><u>2014-<b>Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας</b></u> </p>
+   <p>Το Τμήμα ιδρύθηκε το 1999 και εισήχθησαν για πρώτη φορά φοιτητές το ακαδημαϊκό έτος 2000-2001. Το Τμήμα είναι μοναδικό στην ειδίκευση του στην Ελλάδα [συνδυάζει τη σύγχρονη διοικητική επιστήμη με τις νέες τεχνολογίες (πληροφορική, επικοινωνίες) και τις οργανωσιακές σπουδές] Πανεπιστημιακό Τμήμα.</p>
+      
+    </div>
+	   <hr>
+	   <div class="section"> 
+	   <a id="k2"></a>
+   <h2> Εργασιακή εμπειρία </h2>
+   
+   <p style="text-align:left;"> <u>2015- &laquo; <b>S&B</b>&raquo;Τμήμα Προμηθειων </u></p>
+   <p>Η S&B Industrial Minerals είναι διεθνής όμιλος βιομηχανικών ορυκτών. Σκοπός της είναι να παρέχει διεθνώς βιομηχανικές λύσεις αναπτύσσοντας και μετατρέποντας φυσικούς πόρους σε προϊόντα που δημιουργούν αξία για τους πελάτες της. Η S&B εξορύσσει και επεξεργάζεται μπεντονίτη, περλίτη, βωξίτη, ζεόλιθο, βολλαστονίτη και παράγει συλλιπάσματα συνεχούς χύτευσης καθώς και μεγάλη ποικιλία εξειδικευμένων προϊόντων για ευρύ φάσμα βιομηχανικών εφαρμογών και αγορών, όπως τα χυτήρια, οι κατασκευές και η μεταλλουργία συμβάλλοντας στον σύγχρονο και βιώσιμο τρόπο ζωής.</p>
+  
+   </div>
+     <hr>
+	 <div class="section"> 
+	 <a id="k3"></a>
+       <h2> Ξένες Γλώσσες </h2>
+	   
+	   <ul>
+	      <li> <b><u>Αγγλικά</u></b>
+		    <ul>
+			 <li> ESB</li>
+			 </ul>
+			 </li>
+		</ul>
+		</div>
+		<hr>
+		<div class="section"> 
+		<a id="k4"></a>
+	   <h2> Σεμινάρια  </h2>
+	   
+		  <p style="text-align:left;"> <u>2015- &laquo;Κεπε&raquo; </u></p>
+		   <p>	Παρακολουθηση πολλων ομιλιων στο Κεπε.</p>
+		   
+		   <p style="text-align:left;"> <u>2015- &laquo; Πανοραμα Καινοτομιας και Επιχειρηματικοτητας&raquo; </u></p>
+		   <p>	Παρακολουθηση πολλων σεμιναριων στο πανοραμα .</p>
+		   
+		   <p style="text-align:left;"> <u>2015- &laquo;ΦΣ ΔΕΤ&raquo; </u></p>
+		   <p>	Παρακολούθηση φοιτητικού συνεδρίου τμήματος διοικητικής επιστήμης και τεχνολογίας.</p>
+		   
+		   <p style="text-align:left;"> <u>2015- &laquo;Ομιλία του Πρωθυπουργού στο Σεβ&raquo; </u></p>
+		   <p>	Παρακολουθηση ομιλιων -μεσω προσκλησης- των κυριων Τσιπρα και Βαρουφακη.</p>
+		   </div>
+		   <hr>
+		   <div class="section"> 
+		   <a id="k5"></a>
+			   <h2> Διακρίσεις-Βραβεία  </h2>
+			   
+			     <p style="text-align:left;"> <u>2011- &laquo;Πανελληνιες&raquo; </u></p>
+				 <p>Πρωτος, στην περιοχη των αχαρνων στους τριτεκνους, επιτυχων στις πανελληνιες.</p>
+				 </div>
+				 <hr>
+				 <div class="section"> 
+				 <a id="k6"></a>
+						   <h2> Γνώσεις Πληροφορικής </h2>
+						   
+						        <ul>
+								 <li><u>Λειτουργικά συστήματα </u>
+								  <ul>
+								    <li>Windows 7</li>
+									<li>Windows 8</li>
+									<li>Linux</li>
+									<li>Mac OS</li>
+									</ul>
+									</li>
+									<li><u>Γνώσεις Προγραμματισμού </u>
+								  <ul>
+								    <li>Java</li>
+									<li>Matlab</li>
+									<li>Python</li>
+									</ul>
+									</li>
+								  <li><u>Εφαρμογές Γραφείου </u>
+								  <ul>
+								    <li>Word</li>
+									<li>Excel</li>
+									<li>Access</li>
+									<li>PowerPoint</li>
+									</ul>
+									</li>
+	                             </ul>
+								 </div>
+								 <hr>
+								 <div class="section"> 
+								 <a id="k7"></a>
+								 <h2>Εργασίες</h2>
+								 
+								 <table border="1" class="table2" >
+								   <tr>
+								      <th>Α/Α</th>
+									  <th>Τίτλος μαθήματος</th>
+									  <th>Εξάμηνο</th>
+									  <th>Περιγραφή</th>
+									  <th>Διεύθυνση-URL</th>
+									</tr>  
+                                    
+									<tr>
+									 <td>1</td>
+									 <td>Εισαγωγή στην πληροφορική</td>
+									 <td>1</td>
+									 <td>1η Εργαστηριακή άσκηση στην html </td>
+									 <td class="ppp" ><a target="_blank" href="http://altebaran.dmst.aueb.gr/FS/Students2014/mzoulias/inetpub/exercise1_8140029.html"> προβολη </a></td>
+									</tr> 
+								     
+								<tr>
+									 <td>2</td>
+									 <td>Εισαγωγή στην πληροφορική</td>
+									 <td>1</td>
+									 <td>2η Εργαστηριακή άσκηση στην html-css </td>
+									 <td class="ppp"><a target="_blank" href="http://altebaran.dmst.aueb.gr/FS/Students2014/mzoulias/inetpub/exercise2_8140029.html">προβολη</a></td>
+									 
+									 
+									 <tr>
+									 <td>3</td>
+									 <td>Εισαγωγή στην πληροφορική</td>
+									 <td>1</td>
+									 <td>3η Εργαστηριακή άσκηση στην html </td>
+									 <td class="ppp"><a target="_blank" href="http://altebaran.dmst.aueb.gr/FS/Students2014/mzoulias/inetpub/exercise3_sub2_8140029.html"> προβολη </a></td>
+									</tr> 
+									
+									<tr>
+									 <td>4</td>
+									 <td>Εισαγωγή στην πληροφορική</td>
+									 <td>1</td>
+									 <td>4η Εργαστηριακή άσκηση στην html </td>
+									 <td class="ppp"><a target="_blank" href="http://altebaran.dmst.aueb.gr/FS/Students2014/mzoulias/inetpub/detfolio/index.htm"> προβολη </a></td>
+									</tr> 
+									
+								 </table>
+								 </div>
+								 <hr>
+								 <div class="section"> 
+								 <a id="k8"></a>
+				   <h2> Ενδιαφέροντα  </h2>
+				   
+				   <p style="text-align:left;">Υδατοσφαιριση,κηνυγι,μυικη εκγυμναση,ελληνικη μουσικη,ποδοσφαιρο</p>
+				   </div>
+				   				<p class="hf">  <a href="#top"> Μετάβαση στην αρχή της σελίδας</a></p>
+
+</html >
+		
