@@ -2,6 +2,10 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -22,12 +26,26 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+/*from  www.java2s.com*/
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DefaultStyledDocument;
+import javax.swing.text.Style;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyleContext;
+import javax.swing.text.StyledDocument;
+
 public class WebBrowser extends JFrame implements ActionListener {
 
 	private JPanel middlePanel;
 	private JTextField textField;
 	private JLabel label;
 	private JTextArea textArea;
+	private JEditorPane displayEditorPane;
 	private final static String newline = "\n"; //metavliti gia tin kainourgia grammi
 
 	public static void main(String[] args) {
@@ -49,76 +67,143 @@ public class WebBrowser extends JFrame implements ActionListener {
 
 	    textField.addActionListener(this);
 
-	    textArea = new JTextArea();
-	    textArea.setEditable(false);
-	    getContentPane().add(textArea, BorderLayout.CENTER);
+        displayEditorPane = new JEditorPane();
+        displayEditorPane.setContentType("text/html");
+        displayEditorPane.setEditable(false);
 
-	    JScrollPane scrollPane = new JScrollPane(textArea); //allagi gia to scrollBar
+
+	    getContentPane().add(displayEditorPane, BorderLayout.CENTER);
+
+
+
+	    JScrollPane scrollPane = new JScrollPane(displayEditorPane); //allagi gia to scrollBar
 	    add(scrollPane, BorderLayout.CENTER);
 
 	}
 
+
 	public void actionPerformed(ActionEvent e) {
 		String stringUrl = textField.getText();
 		URLCon urlcon = new URLCon();
-		try {
-			urlcon.createTxt(stringUrl);
+			try {
+				urlcon.createTxt(stringUrl);
 			} catch (Exception ab) {
-				printText("ERROR !");
-			}//ftiaxnei antikeimeno ths URLCon kai kalei thn metodo createTxt()
-			String encoding = "UTF-8";
-			//ftiaxnei antikeimeno ths klasshs Tags_1
-			Tags_1 tag_1 = new Tags_1();
-							try{
-//kanei thn idia douleia me to arxeio java.java dhladh diabazei ton kwdika grammh grammh
-								FileInputStream fstream= new FileInputStream("m.txt");//specify document name
-								DataInputStream in= new DataInputStream(fstream);
-								BufferedReader br=new BufferedReader(new InputStreamReader(in , encoding));
+				System.out.println("ERROR !");
+			}
+			try{
+				int d1 , d2;
+				String charset = "windows-1253";
+				String line;		// epomeni grammi tou arxeiou html
+				/*FileInputStream fstream= new FileInputStream("html.txt");//specify document name
+				DataInputStream in = new DataInputStream(fstream);
+				BufferedReader br = new BufferedReader(new InputStreamReader(in));
+				while((line = br.readLine())!= null){
+					String line1 = line.toUpperCase();
+					d1 = line1.indexOf("CHARSET=");
+					d2 = line1.indexOf(">");
+					if (d1 > -1){
+						  //String charset_tmp = line1.substring(d1+9);
+						  d2 = line1.indexOf(">");
+						  charset = line1.substring(d1+9, d2 );
+						  d1 = charset.indexOf('"');
+						  charset = charset.substring(0, d1  );
+					}
+				}
+				in.close();
+				System.out.println(charset);*/
+				//stis parapanw 17 grammes anazhtoume emeis to charset kai epeita ksanadiavazoume to proramma me to kainourio charset
+				//omws kapoia site (opws to aueb.gr) enw exoun charset = utf-8 , emfanizoun ellhnika mono me to windows-1253
+				String total = ""; // Ayto to string tha to steilei stin othoni tou xristi
+				String title = "Javantistes Web Browser"; // ayto tah emfanizei ean den vrei titlo arxeiou
+				boolean getting_html = false; // oso einai true, emfanizei tis grammes
+				boolean getting_javscript = false; // oso einai true, emfanizei tis grammes
+				FileInputStream gstream= new FileInputStream("html.txt");//specify document name
+				DataInputStream ina = new DataInputStream(gstream);
+				BufferedReader gr = new BufferedReader(new InputStreamReader(ina, charset));
 
-								String line;
-								while((line=br.readLine())!= null){
-									if(line.contains("<p")){
-//an brei tag p (dld "<p" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
-//ayth h diadikasia ginetai pleon edw wste na emfanizetai oxi sto cmd alla sayto pou eftiakse o ladopoulos
-										printText(tag_1.p(line));
-									}
-//an brei tag title (dld "<title" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
-									if(line.contains("<title")){
-										printText(tag_1.title(line));
-									}
-									if(line.contains("<strong")){
-//an brei tag strong (dld "<strong" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
-										printText(tag_1.p(line));
-									}
-									if(line.contains("<a")){
-//an brei tag a (dld "<a" ) tote kalei kai aksiopoiei th me8odo p ths Tags_1
-										printText(tag_1.p(line));
-									}
-								        //h <ul> den xreiazetai, kathoti h <li> einai hdh arketh
-								        if(line.contains("<li")){
-//an brei tag li (dId "<li") tote kalei kai aksiopoiei th me8odo li ths Tags_1
-										printText("   *" + tag_1.li(line));
-								        }
+				while((line = gr.readLine())!= null){
+					// Vriskei to title	(an yparxei):
+					String line1 = line.toUpperCase(); // wste na katalavainei kai to body kai to BODY
+					d1 = line1.indexOf("<TITLE>");
+					d2 = line1.indexOf("</TITLE>");
+					if ((d1 >-1) && (d2 > 0) && (d2 > d1)){
+						title = line.substring(d1+7, d2);
+						this.setTitle(title);
+					}
 
-									if (line.contains("<br>")) {
-										line=line.replace("<br>", "/n");
-									}
+					// Elegxei an exei vrei to <body>:
+					d1 = line1.indexOf("<BODY");
+					if (d1 > -1){
+						getting_html = true;
+					}
+					// Elegxei an exei vrei to </body>
+					d1 = line1.indexOf("</BODY");
+					if (d1 > 0){
+						getting_html = false;
+					}
+
+					// Elegxei an diavzei javscript:
+					d1 = line1.indexOf("<SCRIPT");
+					if (d1 > -1){
+						getting_javscript = true;
+					}
+					// Elegxei an diavzei stamatise na diavzei javscript:
+					d1 = line1.indexOf("</SCRIPT");
+					if (d1 > -1){
+						getting_javscript = false;
+					}
 
 
-									if(line.contains("<hr>")){
-										printText(tag_1.hr(line));
-									}
-								}
-								in.close();
+					if ((getting_html == true) && (getting_javscript == false)){
+						boolean basic_elements = false;
+						int d3 = line1.indexOf("<TABLE");
+						int d4 = line1.indexOf("<TD");
+						int d5 = line1.indexOf("<TR");
+						int d6 = line1.indexOf("<BR");
+						int d7 = line1.indexOf("<HR");
+						int d8 = line1.indexOf("<LI");
+						int d9 = line1.indexOf("<UL");
+						int d10 = line1.indexOf("<OL");
+						int d11 = line1.indexOf("<H1");
+						int d12 = line1.indexOf("<H2");
+						int d13 = line1.indexOf("<H3");
+						int d14 = line1.indexOf("<H4");
+						int d15 = line1.indexOf("<H5");
+						int d16 = line1.indexOf("<H6");
+						int d17 = line1.indexOf("<IMG");
+						int d18 = line1.indexOf("<P");
+						int d19 = line1.indexOf("<A");
+						int d20 = line1.indexOf("<SPAN");
 
-							}
-							catch(Exception ex){
-								System.out.println("An exception is caught!! ");
-								ex.printStackTrace();
-							}
-	}
+						if ((d3>-1) || (d4>-1) || (d5>-1) || (d6>-1) || (d7>-1) || (d8>-1) || (d9>-1) || (d10>-1) || (d11>-1) || (d12>-1) || (d13>-1) || (d14>-1) || (d15>-1) || (d16>-1) || (d17>-1) || (d18>1) || (d19>1) || (d20>1)){
+							basic_elements = true;
+						}
+
+						if (basic_elements == true){
+							// Kanei antiaktastasi to span me to p an einai etsi:
+							String line2 = line.replaceAll("SPAN", "P");
+							// Dimiourgei to string pou tha emfanisei stin othoni:
+							total = total + line2;
+						}
+					}//telos megalhs if
+
+				}//telos while
+				ina.close();
+				printText(total);
+				}catch(Exception ex){
+					System.out.println("An exception is caught!! ");
+					ex.printStackTrace();
+				}
+	}//telos actionPerfomed
 
 	public void printText(String text) {
-			textArea.append(text + newline); // to newline einai anagkastiko gia na allazei grammh alliw kathe fora tha svinei kai tha grafei sth 1h grammh
-	}
-}
+			try{
+				Color bgColor = Color.WHITE;//8etoume emeis bgColor dioti kapoies selides xrisimopoioun css pou emeis den asxoli8ikame
+				displayEditorPane.setBackground(bgColor);
+				displayEditorPane.setText(text);
+			}catch(Exception ex){
+				System.out.println("An exception is caught!! ");
+				ex.printStackTrace();
+			}
+	}//telos printText
+}//telos klasshs WebBrowser
