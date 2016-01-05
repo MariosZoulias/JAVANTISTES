@@ -2,53 +2,31 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
-import java.io.FileWriter;
 import java.io.InputStreamReader;
-import java.util.Scanner;
-import java.net.*;
-import java.io.*;
-import java.util.*;
-import java.io.File;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-/*from  www.java2s.com*/
-import javax.swing.JFrame;
-import javax.swing.JScrollPane;
-import javax.swing.JTextPane;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultStyledDocument;
-import javax.swing.text.Style;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyleContext;
-import javax.swing.text.StyledDocument;
 
+@SuppressWarnings("serial")
 public class WebBrowser extends JFrame implements ActionListener {
 
 	private JPanel middlePanel;
 	private JTextField textField;
+	@SuppressWarnings("unused")
 	private JLabel label;
-	private JTextArea textArea;
 	private JEditorPane displayEditorPane;
-	private final static String newline = "\n"; //metavliti gia tin kainourgia grammi
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		WebBrowser frame = new WebBrowser();
 		frame.setTitle("Javantistes Web Browser");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -76,13 +54,14 @@ public class WebBrowser extends JFrame implements ActionListener {
 
 
 
-	    JScrollPane scrollPane = new JScrollPane(displayEditorPane); //allagi gia to scrollBar
+	    JScrollPane scrollPane = new JScrollPane(
+	    		displayEditorPane); //allagi gia to scrollBar
 	    add(scrollPane, BorderLayout.CENTER);
 
 	}
 
 
-	public void actionPerformed(ActionEvent e) {
+	public final void actionPerformed(final ActionEvent e) {
 		String stringUrl = textField.getText();
 		URLCon urlcon = new URLCon();
 			try {
@@ -90,13 +69,15 @@ public class WebBrowser extends JFrame implements ActionListener {
 			} catch (Exception ab) {
 				System.out.println("ERROR !");
 			}
-			try{
-				int d1 , d2;
+			try {
+				int d1, d2;
 				String charset = "windows-1253";
 				String line;		// epomeni grammi tou arxeiou html
-				/*FileInputStream fstream= new FileInputStream("html.txt");//specify document name
+				/*FileInputStream fstream= new FileInputStream("html.txt");
+				//specify document name
 				DataInputStream in = new DataInputStream(fstream);
-				BufferedReader br = new BufferedReader(new InputStreamReader(in));
+				BufferedReader br = new BufferedReader
+				(new InputStreamReader(in));
 				while((line = br.readLine())!= null){
 					String line1 = line.toUpperCase();
 					d1 = line1.indexOf("CHARSET=");
@@ -111,50 +92,61 @@ public class WebBrowser extends JFrame implements ActionListener {
 				}
 				in.close();
 				System.out.println(charset);*/
-				//stis parapanw 17 grammes anazhtoume emeis to charset kai epeita ksanadiavazoume to proramma me to kainourio charset
-				//omws kapoia site (opws to aueb.gr) enw exoun charset = utf-8 , emfanizoun ellhnika mono me to windows-1253
-				String total = ""; // Ayto to string tha to steilei stin othoni tou xristi
-				String title = "Javantistes Web Browser"; // ayto tah emfanizei ean den vrei titlo arxeiou
-				boolean getting_html = false; // oso einai true, emfanizei tis grammes
-				boolean getting_javscript = false; // oso einai true, emfanizei tis grammes
-				FileInputStream gstream= new FileInputStream("html.txt");//specify document name
+				//stis parapanw 17 grammes anazhtoume emeis to charset kai 
+				//epeita ksanadiavazoume to proramma me to kainourio charset
+				//omws kapoia site (opws to aueb.gr) enw exoun charset = utf-8
+				//emfanizoun ellhnika mono me to windows-1253
+				String total = ""; // Ayto to string 
+				//tha to steilei stin othoni tou xristi
+				String title = "Javantistes Web Browser"; // ayto 
+				//tha emfanizei ean den vrei titlo arxeiou
+				boolean getting_html = false; // oso einai true,
+				//emfanizei tis grammes
+				boolean getting_javscript = false; // oso einai true,
+				//emfanizei tis grammes
+				FileInputStream gstream = new FileInputStream("html.txt");
+				//specify document name
 				DataInputStream ina = new DataInputStream(gstream);
-				BufferedReader gr = new BufferedReader(new InputStreamReader(ina, charset));
+				BufferedReader gr = new BufferedReader(new 
+						InputStreamReader(ina, charset));
 
-				while((line = gr.readLine())!= null){
+				while ((line = gr.readLine()) != null) {
 					// Vriskei to title	(an yparxei):
-					String line1 = line.toUpperCase(); // wste na katalavainei kai to body kai to BODY
+					String line1 = line.toUpperCase(); // wste na 
+					//katalavainei kai to body kai to BODY
 					d1 = line1.indexOf("<TITLE>");
 					d2 = line1.indexOf("</TITLE>");
-					if ((d1 >-1) && (d2 > 0) && (d2 > d1)){
-						title = line.substring(d1+7, d2);
-						this.setTitle(title);
+					if ((d1 > -1) && (d2 > 0) && (d2 > d1)) {
+						title = line.substring(d1 + 7, d2);
+						this.setTitle(title); //me auto ton tropo 
+						//emfanizei panw panw to title
 					}
 
 					// Elegxei an exei vrei to <body>:
 					d1 = line1.indexOf("<BODY");
-					if (d1 > -1){
+					if (d1 > -1) {
 						getting_html = true;
 					}
 					// Elegxei an exei vrei to </body>
 					d1 = line1.indexOf("</BODY");
-					if (d1 > 0){
+					if (d1 > 0) {
 						getting_html = false;
 					}
 
 					// Elegxei an diavzei javscript:
 					d1 = line1.indexOf("<SCRIPT");
-					if (d1 > -1){
+					if (d1 > -1) {
 						getting_javscript = true;
 					}
 					// Elegxei an diavzei stamatise na diavzei javscript:
 					d1 = line1.indexOf("</SCRIPT");
-					if (d1 > -1){
+					if (d1 > -1) {
 						getting_javscript = false;
 					}
 
 
-					if ((getting_html == true) && (getting_javscript == false)){
+					if ((getting_html == true) && (
+							getting_javscript == false)) {
 						boolean basic_elements = false;
 						int d3 = line1.indexOf("<TABLE");
 						int d4 = line1.indexOf("<TD");
@@ -175,35 +167,45 @@ public class WebBrowser extends JFrame implements ActionListener {
 						int d19 = line1.indexOf("<A");
 						int d20 = line1.indexOf("<SPAN");
 
-						if ((d3>-1) || (d4>-1) || (d5>-1) || (d6>-1) || (d7>-1) || (d8>-1) || (d9>-1) || (d10>-1) || (d11>-1) || (d12>-1) || (d13>-1) || (d14>-1) || (d15>-1) || (d16>-1) || (d17>-1) || (d18>1) || (d19>1) || (d20>1)){
+						if ((d3 > -1) || (d4 > -1) || (d5 > -1)
+								|| (d6 > -1) || (d7 > -1) || (d8 > -1)
+								|| (d9 > -1) || (d10 > -1) || (d11 > -1) 
+								|| (d12 > -1) 
+								|| (d13 > -1) || (d14 > -1) || (d15 > -1) 
+								|| (d16 > -1) || (d17 > -1) || (d18 > 1) 
+								|| (d19 > 1) || (d20 > 1)) {
 							basic_elements = true;
 						}
 
-						if (basic_elements == true){
-							// Kanei antiaktastasi to span me to p an einai etsi:
+						if (basic_elements == true) {
+							// Kanei antiaktastasi to span me to p an einai 
+							//etsi:
 							String line2 = line.replaceAll("SPAN", "P");
-							// Dimiourgei to string pou tha emfanisei stin othoni:
+							// Dimiourgei to string pou tha emfanisei
+							//stin othoni:
 							total = total + line2;
 						}
-					}//telos megalhs if
+					} //telos megalhs if
 
-				}//telos while
+				} //telos while
 				ina.close();
 				printText(total);
-				}catch(Exception ex){
+				} catch (Exception ex) {
 					System.out.println("An exception is caught!! ");
 					ex.printStackTrace();
 				}
-	}//telos actionPerfomed
+	} //telos actionPerfomed
 
-	public void printText(String text) {
-			try{
-				Color bgColor = Color.WHITE;//8etoume emeis bgColor dioti kapoies selides xrisimopoioun css pou emeis den asxoli8ikame
+	public final void printText(final String text) {
+			try {
+				Color bgColor = Color.WHITE; //8etoume emeis bgColor
+				//dioti kapoies selides xrisimopoioun css pou emeis 
+				//den asxoli8ikame
 				displayEditorPane.setBackground(bgColor);
 				displayEditorPane.setText(text);
-			}catch(Exception ex){
+			} catch (Exception ex) {
 				System.out.println("An exception is caught!! ");
 				ex.printStackTrace();
 			}
-	}//telos printText
-}//telos klasshs WebBrowser
+	} //telos printText
+} //telos klasshs WebBrowser
